@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import Footer from "../components/Footer";
 import WhoWeAre from "../components/Home/WhoWeAre";
 import reasons from "../../public/json/reasonToChoose";
@@ -14,18 +14,18 @@ const home = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleWaitListJoining = (e) => {
+  const handleWaitListJoining = (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
     const newPostKey = push(child(ref(database), "posts")).key;
-    const updates = {};
+    const updates: any = {};
     updates["/waitlist" + newPostKey] = formData;
 
     setTimeout(() => {
@@ -46,7 +46,7 @@ const home = () => {
       <main className="w-full">
         <section className="app-container py-[60px]">
           <h3 className="lg:mb-[40px] mb-[30px] lg:text-[40px] text-[30px] text-center">
-            Why Choose Santé
+            Why Choose Satori
           </h3>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[24px] gap-y-[32px]">
             {reasons.map((el, i) => (
