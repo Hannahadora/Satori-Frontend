@@ -5,7 +5,7 @@ import icon_4 from "../../src/assets/heart.png"
 import icon_5 from "../../src/assets/icons8_puzzle.png"
 import icon_6 from "../../src/assets/security.png"
 
-const reasons = [
+const reasons: Array<any> = [
     {icon: icon_1, title: "Supportive community", note: "Join a vibrant & compassionate community in a safe aspace to foster growth and healing."},
     {icon: icon_2, title: "Virtual AA meetings", note: "Engage in empowering discussions, find support and connect with people who understand the challenges you face."},
     {icon: icon_3, title: "Expert insights & education", note: "Knowledge is power! Gain valuable insights and expand your understanding of mental health via our expert-driven content"},

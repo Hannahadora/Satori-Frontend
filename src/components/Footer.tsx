@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../style/footer.css";
-import logo from "../assets/sante-logo.png";
+import logo from "../assets/satori-logo.png";
 import { database } from "../firebase";
 import { ref, push, child, update } from "firebase/database";
 
@@ -17,18 +17,18 @@ const Footer = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
     const newPostKey = push(child(ref(database), "posts")).key;
-    const updates = {};
+    const updates: any = {};
     updates["/subscribers" + newPostKey] = formData;
 
     setTimeout(() => {
@@ -91,7 +91,7 @@ const Footer = () => {
           <div className="footer_nav-links">
             <h6 className="mb-[10px]">INFORMATION</h6>
             <Link className="mb-[10px]" to="/">About</Link>
-            <Link className="mb-[10px]" to="/">Why choose sante</Link>
+            <Link className="mb-[10px]" to="/">Why choose Satori</Link>
             <Link className="mb-[10px]" to="/">Who we are</Link>
           </div>
           <div className="footer_nav-links">
@@ -109,8 +109,8 @@ const Footer = () => {
         </div> */}
 
         <div className="border-t border-[#E2E8F0] mt-[24px]">
-          <div className="flex items-center justify-center">
-            <img src={logo} alt="logo" />
+          <div className="flex items-center justify-center mb-[20px] mt-[50px]">
+            <img src={logo} className="h-[58px] w-[174px]" alt="logo" />
           </div>
           <p className="text-[14px] text-center text-[#71717A]">
             © Copyright {new Date().getFullYear()}, All Rights Reserved{" "}

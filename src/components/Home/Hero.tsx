@@ -1,4 +1,3 @@
-import React from "react";
 import hero_bg from "../../assets/home_hero.png";
 // import JoinWaitListBtn from "../JoinWaitListBtn";
 

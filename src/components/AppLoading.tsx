@@ -1,5 +1,4 @@
-import React from "react";
-import logo from "../assets/sante-logo.png";
+import logo from "../assets/satori-part-logo.png";
 
 const AppLoading = () => {
   return (
