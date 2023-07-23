@@ -2,7 +2,9 @@ import { useState } from "react";
 import "../style/footer.css";
 import logo from "../assets/satori-logo.png";
 import { database } from "../firebase";
-import { ref, push, child, update } from "firebase/database";
+import { ref, push, set } from "firebase/database";
+import { toast } from "react-toastify";
+import loadingGif from '../assets/loading-gif.gif'
 
 // import { Link } from "react-router-dom";
 
@@ -24,24 +26,25 @@ const Footer = () => {
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async(e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const newPostKey = push(child(ref(database), "posts")).key;
-    const updates: any = {};
-    updates["/subscribers" + newPostKey] = formData;
 
-    setTimeout(() => {
-      alert("Thank you for subscribing!!! 👍");
+    try {
+      const newPostRef = push(ref(database, "subscribers"));
+      await set(newPostRef, formData);
+      toast("Thank you for subscribing!!! 👍");
+    } catch (error) {
+      toast("Error Subscribing:");
+      console.error("Error Subscribing:", error);
+    } finally {
+         // Clear input fields after submission
+         setFormData({
+          username: "",
+          email: "",
+        });
       setIsSubmitting(false);
-      setFormData({
-        ...formData,
-        username: "",
-        email: "",
-      });
-    }, 3000);
-
-    return update(ref(database), updates);
+    }
   };
 
   return (
@@ -73,7 +76,7 @@ const Footer = () => {
               onChange={handleChange}
             />
             <button type="submit" className="btn pry-btn lg:ml-[16px] ml-[0]" disabled={isSubmitting}>
-              {isSubmitting ? "Processing" : "Subscribe"}
+              {isSubmitting ? <div className="w-full flex items-center justify-center"><img className="w-[20px] h-[20px]" src={loadingGif} alt="loading-spinner" /></div> : "Subscribe"}
             </button>
           </form>
         </div>
