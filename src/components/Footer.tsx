@@ -38,11 +38,10 @@ const Footer = () => {
       toast("Error Subscribing:");
       console.error("Error Subscribing:", error);
     } finally {
-         // Clear input fields after submission
-         setFormData({
-          username: "",
-          email: "",
-        });
+      const emailInput = document.getElementsByName("email")[1] as HTMLInputElement;
+      const usernameInput = document.getElementsByName("username")[0] as HTMLInputElement;
+      emailInput.value = "";
+      usernameInput.value = "";
       setIsSubmitting(false);
     }
   };
