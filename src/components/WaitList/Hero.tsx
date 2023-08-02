@@ -1,9 +1,7 @@
 import hero_bg from "../../assets/images/home-hero.png";
-import { useNavigate } from "react-router-dom";
+// import JoinWaitListBtn from "../JoinWaitListBtn";
 
 const Header = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <main className="app-container relative lg:pt-[140px] md:pt-[120px] pt-[110px] pb-[60px]">
@@ -21,19 +19,17 @@ const Header = () => {
               to mental well-being and personal growth.
             </p>
 
-            <div className="max-w-[336px] w-[100%]">
-              <button
-                type="button"
-                className="btn pry-btn py-[8px] px-[16px]"
-                onClick={() => navigate('/join-waitlist')}
-              >
-                Get Started
+            <div className="max-w-[336px] lg:w-[100%] w-[80%]">
+              <button type="button" className="btn pry-btn py-[8px] px-[16px]">
+                <a className="w-full m-0 p-0" href="#waitlist-section">
+                  Join our waitlist
+                </a>
               </button>
             </div>
           </div>
 
           <div className="lg:w-[40%] w-full lg:mt-0 mt-[24px]">
-            <img className="cursor-pointer" src={hero_bg} alt="sample-image" />
+            <img src={hero_bg} alt="sample-image" />
           </div>
         </div>
       </main>
