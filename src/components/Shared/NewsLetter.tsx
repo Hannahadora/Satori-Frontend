@@ -46,7 +46,7 @@ const NewsLetter = () => {
   return (
     <main className="bg-[#F8FAFC]">
       <section className="app-container lg:py-[40px] py-[30px]">
-        <div className="bg-[#9BE6F2] rounded-[20px] lg:py-[30px] py-[20px]">
+        <div className="bg-[#9BE6F2] rounded-[20px] lg:py-[30px] py-[20px] px-[16px]">
           <p className="mb-[10px] lg:text-[40px] text-[30px] text-center font-[600]">
             Join our newsletter
           </p>

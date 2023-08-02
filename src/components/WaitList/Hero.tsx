@@ -14,12 +14,12 @@ const Header = () => {
               </span>{" "}
               <br /> and Empower your life
             </p>
-            <p className="lg:mb-[120px] mb-[60px] lg:text-[24px] text-[16px] leading-[34px]">
+            <p className="lg:mb-[120px] mb-[60px] lg:text-[24px] text-[16px] lg:leading-[34px]">
               Embrace a healthier mind and happier life with Satori, your path
               to mental well-being and personal growth.
             </p>
 
-            <div className="max-w-[336px] w-[100%]">
+            <div className="max-w-[336px] lg:w-[100%] w-[80%]">
               <button type="button" className="btn pry-btn py-[8px] px-[16px]">
                 <a className="w-full m-0 p-0" href="#waitlist-section">
                   Join our waitlist

@@ -1,7 +1,9 @@
 import hero_bg from "../../assets/images/home-hero.png";
-// import JoinWaitListBtn from "../JoinWaitListBtn";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <main className="app-container relative lg:pt-[140px] md:pt-[120px] pt-[110px] pb-[60px]">
@@ -14,22 +16,24 @@ const Header = () => {
               </span>{" "}
               <br /> and Empower your life
             </p>
-            <p className="lg:mb-[120px] mb-[60px] lg:text-[24px] text-[16px] leading-[34px]">
+            <p className="lg:mb-[120px] mb-[60px] lg:text-[24px] text-[16px] lg:leading-[34px]">
               Embrace a healthier mind and happier life with Satori, your path
               to mental well-being and personal growth.
             </p>
 
             <div className="max-w-[336px] w-[100%]">
-              <button type="button" className="btn pry-btn py-[8px] px-[16px]">
-                <a className="w-full m-0 p-0" href="">
-                  Get Started
-                </a>
+              <button
+                type="button"
+                className="btn pry-btn py-[8px] px-[16px]"
+                onClick={() => navigate('/join-waitlist')}
+              >
+                Get Started
               </button>
             </div>
           </div>
 
           <div className="lg:w-[40%] w-full lg:mt-0 mt-[24px]">
-            <img src={hero_bg} alt="sample-image" />
+            <img className="cursor-pointer" src={hero_bg} alt="sample-image" />
           </div>
         </div>
       </main>
