@@ -21,8 +21,8 @@ const Header = () => {
 
             <div className="max-w-[336px] w-[100%]">
               <button type="button" className="btn pry-btn py-[8px] px-[16px]">
-                <a className="w-full m-0 p-0" href="">
-                  Get Started
+                <a className="w-full m-0 p-0" href="#waitlist-section">
+                  Join our waitlist
                 </a>
               </button>
             </div>

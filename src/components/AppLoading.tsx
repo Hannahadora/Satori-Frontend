@@ -1,4 +1,4 @@
-import logo from "../assets/satori-part-logo.png";
+import logo from "../assets/images/satori-part-logo.png";
 
 const AppLoading = () => {
   return (

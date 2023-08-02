@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    color: #99A3A5;
+    font-weight: 500;
 }
 
 @media screen and(max-width: 768px) {
