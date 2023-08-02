@@ -38,7 +38,7 @@ const JoinWaitList = () => {
 
   return (
     <section
-      className="bg-[#F9F9F9] py-[60px] px-[120px] mx-[80px]"
+      className="bg-[#F9F9F9] lg:py-[60px] py-[40px] lg:px-[120px] md:px-[24px] px-[16px] lg:mx-[80px]"
       id="waitlist-section"
     >
       <div className="app-container flex flex-col items-center justify-center">
@@ -46,7 +46,7 @@ const JoinWaitList = () => {
           Don’t miss out on the opportunity to take control of your mental
           health and unlock a brighter future.
         </p>
-        <h4 className="lg:text-[28px] text-[20px] font-600 lg:mb-[60px] mb-[40px]">
+        <h4 className="lg:text-[28px] text-[24px] font-600 lg:mb-[60px] mb-[40px]">
           100+ Subscribers
         </h4>
         <form
