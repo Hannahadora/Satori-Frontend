@@ -28,11 +28,9 @@ jobs:
 
         with:
           server: satori.ng
-          cpanel_username: ${{ secrets.CPANEL_USERNAME }}
-          cpanel_password: ${{ secrets.CPANEL_PASSWORD }}
-          repository: .
-          branch: master
-          deployment_directory: public_html
+          username: ${{ secrets.CPANEL_USERNAME }}
+          password: ${{ secrets.CPANEL_PASSWORD }}
+          server_dir: public_html/
           exclude: |
             **/.git**
             **/.git*/**
