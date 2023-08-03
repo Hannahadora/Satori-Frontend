@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to cPanel
-        uses: samKirkland/FTP-Deploy-Action@4.3.4
+        uses: samKirkland/FTP-Deploy-Action@4.3.0
         with:
           domain: satori.ng
           cpanel_username: ${{ secrets.CPANEL_USERNAME }}
