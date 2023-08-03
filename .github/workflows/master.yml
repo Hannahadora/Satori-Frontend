@@ -30,7 +30,7 @@ jobs:
           server: satori.ng
           username: ${{ secrets.CPANEL_USERNAME }}
           password: ${{ secrets.CPANEL_PASSWORD }}
-          server-dir: /home2/satori/public_html/
+          server-dir: /public_html/
           exclude: |
             **/.git**
             **/.git*/**
