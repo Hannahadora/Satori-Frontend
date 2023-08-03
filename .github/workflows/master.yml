@@ -1,0 +1,30 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the React app
+        run: npm run build
+
+      - name: Deploy to cPanel
+        uses: jakejarvis/cpanel-git-deploy@4.1.0
+        with:
+          domain: satori.ng
+          cpanel_username: ${{ secrets.CPANEL_USERNAME }}
+          cpanel_password: ${{ secrets.CPANEL_PASSWORD }}
+          repository: .
+          branch: master
+          deployment_directory: public_html
