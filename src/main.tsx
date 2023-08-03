@@ -1,16 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+// ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+//   <React.StrictMode>
+//     <ToastContainer toastStyle={{ border: "1px solid #635FC7" }} />
+//     <App />
+//   </React.StrictMode>
+// );
+
+ReactDOM.render(
   <React.StrictMode>
-    <ToastContainer toastStyle={{ border: '1px solid #635FC7' }} />
+    <ToastContainer toastStyle={{ border: "1px solid #635FC7" }} />
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
