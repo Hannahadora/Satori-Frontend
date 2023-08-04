@@ -1,7 +1,17 @@
+import { useLayoutEffect, useRef } from "react";
 import hero_bg from "../../assets/images/home-hero.png";
-// import JoinWaitListBtn from "../JoinWaitListBtn";
+import { easeIn, typingAnimation } from "../../../helpers/gsapAnimations";
 
 const Header = () => {
+  const typingText = useRef<HTMLElement | any>(null);
+  const leftHS = useRef<HTMLDivElement | any>(null)
+
+
+  useLayoutEffect(() => {
+    typingAnimation(typingText, 'Mental Health')
+    easeIn(leftHS)
+  })
+
   return (
     <>
       <main className="app-container relative lg:pt-[140px] md:pt-[120px] pt-[110px] pb-[60px]">
@@ -9,7 +19,10 @@ const Header = () => {
           <div className="lg:w-[60%] w-full lg:mr-[65px] mr-[0] flex flex-col lg:items-start items-center lg:text-left text-center">
             <p className="lg:leading-[64px] mb-[32px] font-[500] lg:text-[56px] text-[32px] hero-text">
               Transform your <br />
-              <span className="lg:leading-[89px] lg:text-[78px] text-[48px] font-[700]">
+              <span
+                ref={typingText}
+                className="lg:leading-[89px] lg:text-[78px] text-[48px] font-[700]"
+              >
                 Mental Health
               </span>{" "}
               <br /> and Empower your life
@@ -28,7 +41,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="lg:w-[40%] w-full lg:mt-0 mt-[24px]">
+          <div ref={leftHS} className="lg:w-[40%] w-full lg:mt-0 mt-[24px]">
             <img src={hero_bg} alt="sample-image" />
           </div>
         </div>
