@@ -83,6 +83,7 @@ input:focus {
   font-family: "Ubuntu", sans-serif !important;
 }
 
+
 @media screen and (max-width: 1036px) {
   .app-container {
     padding-left: 36px;

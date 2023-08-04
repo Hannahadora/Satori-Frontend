@@ -1,8 +1,29 @@
+import { useRef, useLayoutEffect } from "react";
 import reasons from "../../../public/json/reasonToChoose";
+import { slideDown } from "../../../helpers/gsapAnimations";
 
 const WhyChooseUs = () => {
+  const chooseArea = useRef<HTMLElement | any>();
+
+  const handleScroll = () => {
+    const chooseAreaElement = chooseArea.current;
+    const elementPosition = chooseAreaElement.getBoundingClientRect().top;
+
+    if (elementPosition - window.innerHeight <= 0) {
+      slideDown(chooseAreaElement);
+      window.removeEventListener("scroll", handleScroll);
+    }
+  };
+
+  useLayoutEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <main className="app-container py-[60px]">
+    <main ref={chooseArea} className="app-container py-[60px]">
       <h3 className="lg:mb-[40px] mb-[30px] lg:text-[40px] text-[30px] text-center">
         Why Choose Satori
       </h3>
