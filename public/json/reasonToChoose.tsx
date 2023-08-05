@@ -11,7 +11,7 @@ const reasons: Array<any> = [
     {icon: icon_2, title: "Virtual AA meetings", note: "Engage in empowering discussions, find support and connect with people who understand the challenges you face."},
     {icon: icon_4, title: "Mindfulness made easy", note: "Cultivate mindfulness & discover inner peace via our diverse range of guided & personalized meditation exercises."},
     {icon: icon_5, title: "Unique therapist matching", note: "With our innovative matching algorithm, we pair you with licensed therapists that align to your individual needs and therapeutic goals."},
-    {icon: icon_6, title: "Confidential & safe space", note: "At Santé we prioritise your privacy and understand the importance of creating a safe space for your therapy journey."},
+    {icon: icon_6, title: "Confidential & safe space", note: "At Satori we prioritise your privacy and understand the importance of creating a safe space for your therapy journey."},
 ]
 
 export default reasons

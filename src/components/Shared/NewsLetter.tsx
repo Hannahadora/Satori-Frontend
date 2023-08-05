@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../style/footer.css";
 import { database } from "../../firebase";
-import { ref, push, set } from "firebase/database";
+import { ref, push, set, get, query, orderByChild, equalTo } from "firebase/database";
 import { toast } from "react-toastify";
 import loadingGif from "../../assets/images/loading-gif.gif";
 
@@ -19,38 +19,50 @@ const NewsLetter = () => {
     });
   };
 
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const emailInput = document.getElementsByName("email")[0] as HTMLInputElement;
+    const usernameInput = document.getElementsByName("username")[0] as HTMLInputElement;
+
     try {
-      const newPostRef = push(ref(database, "subscribers"));
-      await set(newPostRef, formData);
-      toast("Thank you for subscribing!!! 👍");
+      const subscribersRef = ref(database, "subscribers");
+
+      // Check if email already exists
+      const existingEmailQuery = query(subscribersRef, orderByChild("email"), equalTo(formData.email));
+      const existingEmailSnapshot = await get(existingEmailQuery);
+      
+      if (existingEmailSnapshot.exists()) {
+        toast("Email already exists on the waitlist!!! 👍");
+      } else {
+        const newPostRef = push(subscribersRef);
+        await set(newPostRef, formData);
+        toast("You have successfully joined the waitlist 😊");
+      }
     } catch (error) {
       toast("Error Subscribing:");
       console.error("Error Subscribing:", error);
     } finally {
-      const emailInput = document.getElementsByName(
-        "email"
-      )[1] as HTMLInputElement;
-      const usernameInput = document.getElementsByName(
-        "username"
-      )[0] as HTMLInputElement;
       emailInput.value = "";
       usernameInput.value = "";
       setIsSubmitting(false);
     }
   };
 
+
   return (
-    <main className="bg-[#F8FAFC]">
+    <main id="join-waitlist" className="bg-[#F8FAFC]">
       <section className="app-container lg:py-[40px] py-[30px]">
-        <div className="bg-[#9BE6F2] rounded-[20px] lg:py-[30px] py-[20px] px-[16px]">
-          <p className="mb-[10px] lg:text-[40px] text-[30px] text-center font-[600]">
-            Join our newsletter
+        <div className="lg:mx-[80px] bg-[#9BE6F2] rounded-[20px] lg:py-[30px] py-[20px] px-[16px] flex flex-col items-center justify-center">
+          <p className="lg:w-[60%] w-[100%] text-[#555E5F] text-center lg:mb-[10px] mb-[10px] lg:text-[24px] text-[18px] leading-[40px]">
+            Don’t miss out on the opportunity to take control of your mental
+            health and unlock a brighter future.
           </p>
-          <p className="mb-[24px] text-center">Stay connected and updated on the latest updates, and insights</p>
+          <h4 className="lg:text-[28px] text-[24px] font-600 lg:mb-[24px] mb-[20px]">
+            100+ Subscribers
+          </h4>
           <form
             onSubmit={handleSubmit}
             className="lg:w-[45%] w-full mx-auto flex flex-col items-center justify-center"
@@ -85,7 +97,7 @@ const NewsLetter = () => {
                   />
                 </div>
               ) : (
-                "Subscribe Now"
+                "Join Now"
               )}
             </button>
           </form>
