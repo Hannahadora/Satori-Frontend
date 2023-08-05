@@ -34,7 +34,7 @@ const Header = () => {
 
             <div className="max-w-[336px] lg:w-[100%] w-[80%]">
               <button type="button" className="btn pry-btn py-[8px] px-[16px]">
-                <a className="w-full m-0 p-0" href="#waitlist-section">
+                <a className="w-full m-0 p-0" href="#join-waitlist">
                   Join our waitlist
                 </a>
               </button>

@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
       <h3 className="lg:mb-[40px] mb-[30px] lg:text-[40px] text-[30px] text-center">
         Why Choose Satori
       </h3>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[24px] gap-y-[32px]">
+      <div className="lg:mx-[80px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[24px] gap-y-[32px]">
         {reasons.map((el, i) => (
           <div
             key={i}

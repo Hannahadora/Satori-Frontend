@@ -12,7 +12,7 @@ const AppHeader = () => {
   };
 
   return (
-    <header className="w-full z-[2] bg-[#ffffff] top-0 fixed">
+    <header className="app-header w-full z-[2] top-0 fixed">
       <main className="app-container">
         <div className="py-[24px] flex items-center justify-between">
           <div className="lg:w-[200px] md:w-[120] w-[80px] cursor-pointer">

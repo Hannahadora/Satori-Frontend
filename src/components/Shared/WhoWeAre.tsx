@@ -2,7 +2,7 @@ const WhoWeAre = () => {
   return (
     <>
       <main className="app-container py-[60px]">
-        <div className="flex lg:flex-row flex-col items-center justify-between">
+        <div className="lg:mx-[80px] flex lg:flex-row flex-col items-center justify-between">
           <article className="lg:w-[50%] w-full lg:mr-[120px] mr-[0] lg:text-left text-center">
             <h3 className="lg:mb-[22px] mb-[20px] lg:text-[40px] text-[30px] lg:text-left text-center">
               Who we are
