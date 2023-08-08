@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { JoinWaitList } from "./pages/index";
 import AppLoading from "./components/AppLoading";
-import NotificationAlert from "./components/NotificationAlert";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +24,6 @@ function App() {
       ) : (
         <>
           <Router>
-            <NotificationAlert title="" msg="" alertType="" onClose={() => {}} />
             <Routes>
               <Route path="/" element={<JoinWaitList />} />
               {/* <Route path="/" element={<MainLayout />}>
