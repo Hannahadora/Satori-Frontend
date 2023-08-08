@@ -63,7 +63,7 @@ const NewsLetter = () => {
         toast.success("You have successfully joined the waitlist 😊");
       }
     } catch (error) {
-      toast("Error Subscribing:");
+      toast.error("Error Subscribing:");
       console.error("Error Subscribing:", error);
     } finally {
       emailInput.value = "";
