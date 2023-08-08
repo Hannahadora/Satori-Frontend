@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { JoinWaitList } from "./pages/index";
 import AppLoading from "./components/AppLoading";
-// import MainLayout from "./layout/MainLayout";
+import NotificationAlert from "./components/NotificationAlert";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,14 +23,17 @@ function App() {
       {isLoading ? (
         <AppLoading />
       ) : (
-        <Router>
-          <Routes>
-            <Route path="/" element={<JoinWaitList />} />
-            {/* <Route path="/" element={<MainLayout />}>
+        <>
+          <Router>
+            <NotificationAlert title="" msg="" alertType="" onClose={() => {}} />
+            <Routes>
+              <Route path="/" element={<JoinWaitList />} />
+              {/* <Route path="/" element={<MainLayout />}>
               <Route path="" element={<Home />} />
             </Route> */}
-          </Routes>
-        </Router>
+            </Routes>
+          </Router>
+        </>
       )}
     </Suspense>
   );
