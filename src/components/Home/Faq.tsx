@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IFaq, faqsData } from "../../../public/json/faqsData";
 import arrow_up from "../../assets/icons/circle_arrow_up.svg";
 import arrow_down from "../../assets/icons/circle_arrow_down.svg";
@@ -17,6 +17,11 @@ const Faq = () => {
         return newState;
       });
   };
+
+  useEffect(() => {
+    setFaqs(faqsData)
+  }, [])
+  
 
   return (
     <div className="app-container pt-[80px]">
