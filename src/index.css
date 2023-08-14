@@ -20,6 +20,10 @@ body {
   background: #fff;
 }
 
+.header_nav-link{
+  display: block;
+  margin-bottom: 10px;
+}
 .app-container {
   max-width: 1200px;
   width: 100%;
@@ -65,6 +69,10 @@ input:focus {
   border: 2px solid #0e606e;
   background-color: transparent;
   color: #0e606e;
+}
+.faq-btn-wrapper button:hover{
+background-color:#0e606e ;
+color:#ffffff ;
 }
 
 .sub-title_01 {
@@ -113,7 +121,7 @@ input:focus {
     line-height: 30px;
   }
 
-  .btn {
+  .btn, .pry-btn {
     padding: 9px 22px;
   }
   

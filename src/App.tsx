@@ -2,6 +2,8 @@ import { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { JoinWaitList } from "./pages/index";
+import FAQpage from "./pages/FAQpage"
+import CommunityPage from "./pages/CommunityPage"
 import AppLoading from "./components/AppLoading";
 // import MainLayout from "./layout/MainLayout";
 
@@ -26,6 +28,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<JoinWaitList />} />
+            <Route path="/community" element={<CommunityPage />} />
+            <Route path="/faqpage" element={<FAQpage />} />
             {/* <Route path="/" element={<MainLayout />}>
               <Route path="" element={<Home />} />
             </Route> */}
