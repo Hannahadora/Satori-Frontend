@@ -1,9 +1,9 @@
 import { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { JoinWaitList } from "./pages/index";
+import { JoinWaitList, Home } from "./pages/index";
 import AppLoading from "./components/AppLoading";
-// import MainLayout from "./layout/MainLayout";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,14 +23,16 @@ function App() {
       {isLoading ? (
         <AppLoading />
       ) : (
-        <Router>
-          <Routes>
-            <Route path="/" element={<JoinWaitList />} />
-            {/* <Route path="/" element={<MainLayout />}>
-              <Route path="" element={<Home />} />
-            </Route> */}
-          </Routes>
-        </Router>
+        <>
+          <Router>
+            <Routes>
+              <Route path="/join-waitlist" element={<JoinWaitList />} />
+              <Route path="/" element={<MainLayout />}>
+                <Route path="" element={<Home />} />
+              </Route>
+            </Routes>
+          </Router>
+        </>
       )}
     </Suspense>
   );
