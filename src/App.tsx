@@ -25,16 +25,16 @@ function App() {
       {isLoading ? (
         <AppLoading />
       ) : (
-        <Router>
-          <Routes>
+        
+      <>
+          <Router>
+            <Routes>
             <Route path="/" element={<JoinWaitList />} />
             <Route path="/community" element={<CommunityPage />} />
             <Route path="/faqpage" element={<FAQpage />} />
-            {/* <Route path="/" element={<MainLayout />}>
-              <Route path="" element={<Home />} />
-            </Route> */}
-          </Routes>
-        </Router>
+            </Routes>
+          </Router>
+        </>
       )}
     </Suspense>
   );
