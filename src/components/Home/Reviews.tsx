@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IReview, usersReviews } from "../../../public/json/userReviews";
 import quoteIcon from "../../assets/icons/quote.svg"
 
 const Reviews = () => {
   const [reviews, setReviews] = useState(usersReviews);
+
+  useEffect(() => {
+    setReviews(usersReviews)
+  }, [])
+  
 
   return (
     <div className="app-container">
