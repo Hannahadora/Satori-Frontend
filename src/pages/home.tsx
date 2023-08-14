@@ -1,7 +1,10 @@
 import NewsLetter from "../components/Shared/NewsLetter";
 import Hero from "../components/Home/Hero";
 import WhyChooseUs from "../components/Shared/WhyChooseUs";
+import Reviews from "../components/Home/Reviews"
+import CommunityData from "../components/Home/CommunityData";
 import { useNavigate } from "react-router-dom";
+import Faq from "../components/Home/Faq";
 
 const home = () => {
   const navigate = useNavigate();
@@ -23,6 +26,9 @@ const home = () => {
           Get Started
         </button>
       </div>
+      <Reviews />
+      <CommunityData />
+      <Faq />
       <NewsLetter />
     </>
   );
