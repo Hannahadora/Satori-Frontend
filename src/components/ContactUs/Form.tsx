@@ -3,7 +3,7 @@ import letter_send from "../../assets/images/letter_send_1.png"
 
 const Form = () => {
   return (
-    <div className="md::w-[60%] w-[100%] mt-[20px]">
+    <div className="md:w-[60%] w-[100%] md:mt-[20px] mt-[60px]">
       <form className="w-full">
         <div className=" flex flex-col items-start">
           <input
@@ -25,8 +25,8 @@ const Form = () => {
 
         <div className="mt-[30px]">
           <label className="text-[#0A0E0F] font-[600]">Select Subject</label>
-          <div className="mt-[14px] flex items-center">
-            <div className="flex md:flex-nowrap flex-wrap items-center mr-[24px]">
+          <div className="mt-[14px] flex md:flex-nowrap flex-wrap items-center">
+            <div className="flex items-center mr-[24px]">
               <input
                 className="mr-[8px]"
                 type="radio"
