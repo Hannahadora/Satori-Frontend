@@ -5,7 +5,6 @@ import { JoinWaitList } from "./pages/index";
 import FAQpage from "./pages/FAQpage"
 import CommunityPage from "./pages/CommunityPage"
 import AppLoading from "./components/AppLoading";
-// import MainLayout from "./layout/MainLayout";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +31,7 @@ function App() {
             <Route path="/" element={<JoinWaitList />} />
             <Route path="/community" element={<CommunityPage />} />
             <Route path="/faqpage" element={<FAQpage />} />
+                <Route path="" element={<Home />} />
             </Routes>
           </Router>
         </>

@@ -91,6 +91,13 @@ color:#ffffff ;
   font-family: "Ubuntu", sans-serif !important;
 }
 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 @media screen and (max-width: 1036px) {
   .app-container {
