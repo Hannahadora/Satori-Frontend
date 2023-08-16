@@ -1,9 +1,18 @@
 import { useState } from "react";
 import "../../style/footer.css";
 import { database } from "../../firebase";
-import { ref, push, set, get, query, orderByChild, equalTo } from "firebase/database";
+import {
+  ref,
+  push,
+  set,
+  get,
+  query,
+  orderByChild,
+  equalTo,
+} from "firebase/database";
 import { toast } from "react-toastify";
 import loadingGif from "../../assets/images/loading-gif.gif";
+import satoriNotify from "../../../helpers/satoriNotify";
 
 const NewsLetter = () => {
   const [formData, setFormData] = useState({
@@ -19,30 +28,42 @@ const NewsLetter = () => {
     });
   };
 
-
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const emailInput = document.getElementsByName("email")[0] as HTMLInputElement;
-    const usernameInput = document.getElementsByName("username")[0] as HTMLInputElement;
+    const emailInput = document.getElementsByName(
+      "email"
+    )[0] as HTMLInputElement;
+    const usernameInput = document.getElementsByName(
+      "username"
+    )[0] as HTMLInputElement;
 
     try {
       const subscribersRef = ref(database, "subscribers");
 
       // Check if email already exists
-      const existingEmailQuery = query(subscribersRef, orderByChild("email"), equalTo(formData.email));
+      const existingEmailQuery = query(
+        subscribersRef,
+        orderByChild("email"),
+        equalTo(formData.email)
+      );
       const existingEmailSnapshot = await get(existingEmailQuery);
-      
+
       if (existingEmailSnapshot.exists()) {
-        toast("Email already exists on the waitlist!!! 👍");
+        toast.info("Email already exists on the waitlist!!! 👍")
+        satoriNotify(
+          "Notification Title",
+          "This is a notification message.",
+          "success"
+        );
       } else {
         const newPostRef = push(subscribersRef);
         await set(newPostRef, formData);
-        toast("You have successfully joined the waitlist 😊");
+        toast.success("You have successfully joined the waitlist 😊");
       }
     } catch (error) {
-      toast("Error Subscribing:");
+      toast.error("Error Subscribing:");
       console.error("Error Subscribing:", error);
     } finally {
       emailInput.value = "";
@@ -50,7 +71,6 @@ const NewsLetter = () => {
       setIsSubmitting(false);
     }
   };
-
 
   return (
     <main id="join-waitlist" className="bg-[#F8FAFC]">
