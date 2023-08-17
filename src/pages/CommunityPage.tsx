@@ -20,30 +20,41 @@ const CommunityPage: React.FC = () => {
   return (
     <>
       <div className="max-w-4xl mx-auto pt-24 text-center">
-        <h3 className="font-semibold mb-2 text-black pt-8 text-4xl font-bold">You’ve got questions?</h3>
-        <p className="mb-4 text-black">We’ve got answers!</p>
-        <p className="mb-8 text-black text-base">
-            Find quick answers to frequently asked questions our community.
+      <h3 className="font-semibold mb-2 text-black pt-8 text-4xl font-bold">You’ve got questions?</h3>
+        <p className="mb-4 text-black text-xl">We’ve got answers!</p>
+        <p className="mb-8 text-black text-2xl">
+            Find quick answers to frequently asked questions about our community.
         </p>
         <div className="app-container text-center max-auto  py-8  pb-16">
           <Accordion>
             {CommunityFaqData.map((item) => (
-              <AccordionItem key={item.id}>
-              <h3
-              className="border-b pt-4 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform sm:tracking-normal"
-              onClick={() =>
-              toggleAccordion(item.id)}>
-              {item.question}
-              <span className="accordion-arrow">
-                {openAccordionId === item.id ? <BiChevronUp className='border-black border rounded-full'/> : <span className='flex items-center'>5 openings<BiChevronDown className='border-black border rounded-full' /></span>}
-              </span>
-              </h3>
-              <div
-              className={`accordion-content ${openAccordionId === item.id ? 'block' : 'hidden'} pt-5 text-justify`}
-              >
-              {item.answer}
-              </div>
-              </AccordionItem>
+           <AccordionItem key={item.id}>
+           <h3
+             className="border-b pt-4 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-2xl md:text-base sm:text-sm"
+             onClick={() => toggleAccordion(item.id)}
+           >
+             <div className="w-60 md:w-full">
+               <span className="mr-2">{item.question}</span>
+             </div>
+             <div className="w-40 md:w-full flex items-center justify-end">
+               {openAccordionId === item.id ? (
+                 <BiChevronUp className="border-black border rounded-full" />
+               ) : (
+                 <span className="flex items-center">
+                   5 openings <span className="ml-1" />{' '}
+                   <BiChevronDown className="border-black border rounded-full" />
+                 </span>
+               )}
+             </div>
+           </h3>
+           <div
+             className={`accordion-content ${
+               openAccordionId === item.id ? 'block' : 'hidden'
+             } border-b pt-5 text-justify xl:text-xl md:text-base sm:text-sm`}
+           >
+             {item.answer}
+           </div>
+         </AccordionItem>
             ))}
           </Accordion>
         </div>

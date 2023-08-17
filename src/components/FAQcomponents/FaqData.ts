@@ -47,7 +47,7 @@ interface FaqItem {
     },
     {
       id: 9,
-      question: "Are the articles and resources on Satori Mental Health Insights\nwritten by professionals?",
+      question: "Are the articles or resources on Satori Mental Health Insights written by professionals?",
       answer: "Yes, all content on Satori Mental Health Insights is authored by licensed mental health professionals, researchers, or experts in the field, ensuring accuracy and reliability."
     },
     {

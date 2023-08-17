@@ -13,8 +13,6 @@ const Footer = () => {
       <div className="app-container w-full mt-[116px] mb-[34px] flex items-start justify-between">
         <div className="w-[15%]">
           <img src={footerLogo} alt="logo" />
-          <p className="text-white pt-8 text-sm">Make a donation to help someone today</p>
-          <button className="pry-btn py-[15px] px-[30px] rounded-full mt-6">Make a donation</button>
         </div>
         <section className="w-[70%] flex flex-row items-start justify-between mb-[96px]">
           <div className="footer_nav-links">

@@ -2,6 +2,7 @@ import { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FAQpage from "./pages/FAQpage";
+import AboutUs from "./pages/about-us";
 import CommunityPage from "./pages/CommunityPage";
 import { JoinWaitList, Home, ContactUs } from "./pages/index";
 import AppLoading from "./components/AppLoading";
@@ -34,6 +35,7 @@ function App() {
             </Route>
             <Route path="/community" element={<CommunityPage />} />
             <Route path="/faqpage" element={<FAQpage />} />
+            <Route path="/about-us" element={<AboutUs/>} />
           </Routes>
         </Router>
       )}
