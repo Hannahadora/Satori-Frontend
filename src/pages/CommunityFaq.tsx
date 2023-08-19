@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import { Accordion, AccordionItem } from 'react-accessible-accordion';
 import CommunityFaqData from '../components/CommunityCompo/CommunityFaqData'
-import AvatarGroupSec from '../components/FAQcomponents/AvatarGroupSec';
-
 
 const CommunityPage: React.FC = () => {
   const [openAccordionId, setOpenAccordionId] = useState<number | null>(null);
