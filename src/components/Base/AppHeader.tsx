@@ -63,7 +63,7 @@ const AppHeader = () => {
               </li>
               <li className="header_nav-link">
                 <NavLink
-                  to="/faqs"
+                  to="/faqpage"
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active-hnav-link" : ""
                   }

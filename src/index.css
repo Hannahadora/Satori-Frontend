@@ -20,6 +20,15 @@ body {
   background: #fff;
 }
 
+:root {
+  --accent-color-02: #C6F0F8;
+}
+
+
+.header_nav-link{
+  display: block;
+  margin-bottom: 10px;
+}
 .app-container {
   max-width: 1200px;
   width: 100%;
@@ -66,7 +75,18 @@ input:focus {
   background-color: transparent;
   color: #0e606e;
 }
+.faq-btn-wrapper button:hover{
+background-color:#0e606e ;
+color:#ffffff ;
+}
 
+.team-profile{
+margin: 10px;
+padding: 2px! important;
+ border-radius: 24px 24px 0px 0px;
+background-color: #F9F9F9;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
+}
 .sub-title_01 {
   font-weight: 500;
   font-size: 24px;
@@ -120,8 +140,12 @@ input:focus {
     line-height: 30px;
   }
 
-  .btn {
+  .btn, .pry-btn {
     padding: 9px 22px;
+  }
+  .custom-line-break {
+    white-space: normal;
+    word-wrap: break-word;
   }
   
 }

@@ -14,7 +14,6 @@ const Footer = () => {
         <div className="w-[15%]">
           <img src={footerLogo} alt="logo" />
         </div>
-
         <section className="w-[70%] flex flex-row items-start justify-between mb-[96px]">
           <div className="footer_nav-links">
             <p className="text-[#F9F9F9] mb-[16px] text-[14px] fomt-[600]">
