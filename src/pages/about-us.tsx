@@ -1,7 +1,6 @@
 import Heroimg1 from '../assets/images/faq/Heroimg1.png'
 import Heroimg2 from '../assets/images/faq/Heroimg2.png'
 import WhoImg from '../assets/images/faq/Who we are.png'
-import MainLayout from '../layout/MainLayout';
 import Team from '../components/AboutUs/Team'
 import Mission from '../components/AboutUs/Mission';
 
@@ -33,7 +32,6 @@ function AboutUs() {
         </div>
     <Mission />
     <Team />
-    < MainLayout />
     </div>
     </>
  ) 

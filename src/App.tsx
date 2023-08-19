@@ -1,10 +1,8 @@
 import { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FAQpage from "./pages/FAQpage";
-import AboutUs from "./pages/about-us";
-import CommunityPage from "./pages/CommunityPage";
-import { JoinWaitList, Home, ContactUs } from "./pages/index";
+import CommunityPage from "./pages/CommunityFaq";
+import { JoinWaitList, Home, ContactUs, AboutUs, Faqs } from "./pages/index";
 import AppLoading from "./components/AppLoading";
 import MainLayout from "./layout/MainLayout";
 
@@ -32,10 +30,10 @@ function App() {
             <Route path="/" element={<MainLayout />}>
               <Route path="" element={<Home />} />
               <Route path="contact-us" element={<ContactUs />} />
+              <Route path="/community" element={<CommunityPage />} />
+              <Route path="/faqs" element={<Faqs />} />
+              <Route path="/about-us" element={<AboutUs />} />
             </Route>
-            <Route path="/community" element={<CommunityPage />} />
-            <Route path="/faqpage" element={<FAQpage />} />
-            <Route path="/about-us" element={<AboutUs/>} />
           </Routes>
         </Router>
       )}

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
-import MainLayout from '../layout/MainLayout'
 import { Accordion, AccordionItem } from 'react-accessible-accordion';
 import CommunityFaqData from '../components/CommunityCompo/CommunityFaqData'
 import AvatarGroupSec from '../components/FAQcomponents/AvatarGroupSec';
@@ -19,18 +18,13 @@ const CommunityPage: React.FC = () => {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto pt-24 text-center">
-      <h3 className="font-semibold mb-2 text-black pt-8 text-4xl font-bold">You’ve got questions?</h3>
-        <p className="mb-4 text-black text-xl">We’ve got answers!</p>
-        <p className="mb-8 text-black text-2xl">
-            Find quick answers to frequently asked questions about our community.
-        </p>
-        <div className="app-container text-center max-auto  py-8  pb-16">
-          <Accordion>
+    <div className="px-36">
+        <div className="app-container text-center max-auto  py-8  px-4 py-8 md:px-8 lg:px-16  sm:px-4  pb-16 pb-16">
+          <Accordion className="px-10 pt-[10px] pb-[20px]">
             {CommunityFaqData.map((item) => (
            <AccordionItem key={item.id}>
            <h3
-             className="border-b pt-4 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-2xl md:text-base sm:text-sm"
+             className={`${openAccordionId === item.id ? 'border-none' : 'border-b'} px-4 pb-[16px] pt-[40px] accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-2xl md:text-base sm:text-sm`}
              onClick={() => toggleAccordion(item.id)}
            >
              <div className="w-60 md:w-full">
@@ -50,7 +44,7 @@ const CommunityPage: React.FC = () => {
            <div
              className={`accordion-content ${
                openAccordionId === item.id ? 'block' : 'hidden'
-             } border-b pt-5 text-justify xl:text-xl md:text-base sm:text-sm`}
+             } border-b pt-5 text-justify xl:text-xl md:text-base sm:text-sm pb-[20px] px-[16px]`}
            >
              {item.answer}
            </div>
@@ -58,10 +52,7 @@ const CommunityPage: React.FC = () => {
             ))}
           </Accordion>
         </div>
-      </div> 
-      <AvatarGroupSec />
-      <div className="pb-20" />
-      <MainLayout />
+        </div>
     </>
   );
 }
