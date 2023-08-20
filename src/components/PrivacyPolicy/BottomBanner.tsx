@@ -1,5 +1,3 @@
-import React from "react";
-
 const BottomBanner = () => {
   return (
     <main className="app-container">
