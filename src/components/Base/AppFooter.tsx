@@ -83,7 +83,7 @@ const Footer = () => {
             <Link className="mb-[12px]" to="/">
               Terms
             </Link>
-            <Link className="mb-[12px]" to="/">
+            <Link className="mb-[12px]" to="/privacy-policy">
               Privacy policy
             </Link>
             <Link className="mb-[12px]" to="/">

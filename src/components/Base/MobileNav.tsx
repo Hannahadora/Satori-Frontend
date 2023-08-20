@@ -20,7 +20,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ closeMobileNav }) => {
   };
   return (
     <div>
-      <div className="app-header w-full h-[60%] z-[2] top-0 fixed">
+      <div className="app-header w-full h-[80%] z-[2] top-0 fixed">
         <div className="flex flex-col items-end justify-end">
           <nav className="w-[80%] mt-[30px] px-[24px] py-[24px]">
           <div className="mb-[20px] flex items-center justify-end">
