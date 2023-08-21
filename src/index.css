@@ -87,6 +87,15 @@ padding: 2px! important;
 background-color: #F9F9F9;
 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
 }
+
+.heroImg-width2{
+  width: 814px;
+height: 510px;
+}
+.heroImg-width{
+  width: 461px;
+  height: 510px;
+}
 .sub-title_01 {
   font-weight: 500;
   font-size: 24px;
