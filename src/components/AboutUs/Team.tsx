@@ -92,7 +92,7 @@ function TeamSection() {
                 <div className='team-profile'>
                     <img src={Health} alt="writer" />
                     <h3 className='xl:text-3xl md:text-2xl sm:text-lg text-accent-color-main p-2'>Achi Kingsley</h3>
-                    <p className='ps-2 xl:text-2xl md:text-2xl sm:text-lg'>Medicat Writer</p>
+                    <p className='ps-2 xl:text-2xl md:text-2xl sm:text-lg'>Medical Writer</p>
                     <p className='p-2 xl:text-lg md:text-base sm:text-sm'>Medical writer illuminating complex topics with precision and empathy to promote understanding</p>
                 </div>
 
@@ -100,7 +100,7 @@ function TeamSection() {
                     <img src={Fullstack1} alt="fullstack" />
                     <h3 className='xl:text-3xl md:text-2xl sm:text-lg text-accent-color-main p-2'>Akinola Akinleye</h3>
                     <p className='ps-2 xl:text-2xl md:text-2xl sm:text-lg'>fullstack Developer</p>
-                    <p className='p-2 xl:text-lg md:text-base sm:text-sm'>Building seamless digital solutions from top to bottom as a versatile full-stack developer</p>
+                    <p className='p-2 xl:text-lg md:text-base sm:text-sm'>Creating robust and user-centric applications with expertise in both front-end and back-end technologies</p>
                 </div>
 
                <div className='team-profile'>
@@ -112,7 +112,7 @@ function TeamSection() {
 
                 <div className='team-profile'>
                     <img src={Fullstack2} alt="fullstack" />
-                    <h3 className='xl:text-3xl md:text-2xl sm:text-lg text-accent-color-main p-2'>Akinola Akinleye</h3>
+                    <h3 className='xl:text-3xl md:text-2xl sm:text-lg text-accent-color-main p-2'>Emmanuel Onyeyaforo</h3>
                     <p className='ps-2 xl:text-2xl md:text-2xl sm:text-lg'>fullstack Developer</p>
                     <p className='p-2 xl:text-lg md:text-base sm:text-sm'>Building seamless digital solutions from top to bottom as a versatile full-stack developer</p>
                 </div>
