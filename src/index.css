@@ -153,12 +153,13 @@ object-fit: cover;
   .btn, .pry-btn {
     padding: 9px 22px;
   }
-  .custom-line-break {
-    white-space: normal;
-    word-wrap: break-word;
-  }
   .heroImg-width2{
     width: 100%;
-    }
+  }
+  .sm-width1,
+  .sm-width2
+  {
+    width: 50%;
+  }
   
 }
