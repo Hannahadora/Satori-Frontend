@@ -8,7 +8,6 @@ import Health from '../../assets/images/faq/Health.png'
 import Fullstack1 from '../../assets/images/faq/Fullstack1.png'
 import Analyst from '../../assets/images/faq/Analyst.png'
 import Dev from '../../assets/images/faq/Dev.png'
-// import Writer2 from '../assets/Rectangle 12 (12).png'
 import Media from '../../assets/images/faq/Media.png'
 import Fullstack2 from '../../assets/images/faq/Fullstack2.png'
 import Team from '../../assets/images/faq/Team.png'
@@ -20,9 +19,9 @@ function TeamSection() {
         <>
         <div className=''>
         <div className='app-container'>
-        <div className="flex flex-col items-center p-20">
+        <div className="flex flex-col items-center lg:p-20 pt-5 ">
                 <img src={Team} alt="our-team" className="mb-4 sm-[5%] md-[50%]" />
-                <h5 className="text-center lg:text-2xl md:text-1xl sm:text-lg">Meet our dynamic team of passionate experts, dedicated to creating innovative solutions and fostering positive change in the world</h5></div>
+                <h5 className="text-center lg:text-2xl md:text-1xl sm:text-lg pt-5">Meet our dynamic team of passionate experts, dedicated to creating innovative solutions and fostering positive change in the world</h5></div>
 
             
             <div className=' grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-6 pb-20'>

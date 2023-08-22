@@ -7,7 +7,7 @@ import value from '../../assets/images/faq/Values.png';
 
 function Mission() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8 py-20 px-20 lg:text-xl md:text-lg sm:text-base bg-accent-color-02'>
+    <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8 py-20 lg:px-20 px-5 lg:text-xl md:text-lg sm:text-base bg-accent-color-02'>
       
         <div className=''>
             <img src={About1} alt="picture" />
