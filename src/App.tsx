@@ -14,6 +14,8 @@ import {
   AccountSettings,
   PrivacyAndSecurity,
   LoginAndPassword,
+  UsingSatori,
+  OurBlog,
 } from "./pages/index";
 import AppLoading from "./components/AppLoading";
 import MainLayout from "./layout/MainLayout";
@@ -62,6 +64,14 @@ function App() {
               <Route
                 path="/help-and-support/login-and-password"
                 element={<LoginAndPassword />}
+              />
+              <Route
+                path="/help-and-support/using-satori"
+                element={<UsingSatori />}
+              />
+              <Route
+                path="/help-and-support/our-blog"
+                element={<OurBlog />}
               />
             </Route>
           </Routes>
