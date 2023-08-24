@@ -13,3 +13,5 @@ export const PrivacyAndSecurity = lazy(() => import('./help-and-support/privacy-
 export const LoginAndPassword = lazy(() => import('./help-and-support/login-and-password'))
 export const UsingSatori = lazy(() => import('./help-and-support/using-satori'))
 export const OurBlog = lazy(() => import('./help-and-support/our-blog'))
+export const Cookies = lazy(() => import('./cookies'))
+export const Terms = lazy(() => import('./terms-of-use'))

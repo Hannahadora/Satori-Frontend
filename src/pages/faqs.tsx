@@ -18,60 +18,42 @@ const FAQpage: React.FC = () => {
   };
   return (
     <>
-      <div className="pt-24 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="font-semibold mb-2 text-black pt-8 text-4xl font-bold">
+      <div className="pt-24 lg:w-[100%] md-[60%] w-full mx-auto">
+        <div className="app-container text-center">
+          <h3 className="font-semibold mb-2 text-black pt-8 text-4xl font-bol">
             You’ve got questions?
           </h3>
           <p className="mb-4 text-black text-xl">We’ve got answers!</p>
-          <p className="mb-8 text-black text-2xl">
+          <p className="mb-8 text-black lg:text-2xl md:text-1xl text-lg text-start lg:px-30 md:px-20 ">
             Find quick answers to frequently asked questions about Satori and
             our community.
           </p>
-          <div className="flex justify-start items-start faq-btn-wrapper py-8 space-x-4">
-            <button
-              onClick={() => setActiveState("satori")}
-              className="bg-transparent border border-gray-700 text-black  py-4 px-5 tracking-widest text-base rounded-full"
-            >
-              About Satori
-            </button>
-            <button
-              onClick={() => setActiveState("community")}
-              className="bg-transparent border border-#E6E8E8 text-black  py-4 px-8 text-base rounded-full"
-            >
-              About our community
-            </button>
+          <div className="flex justify-start text-center faq-btn-wrapper py-8 space-x-4 lg:px-30 md:px-20">
+          <button onClick={() => setActiveState("satori")}className="bg-transparent border border-gray-700 text-black py-2 md:py-4 px-5 md:tracking-widest text-xs md:text-base rounded-full">About Satori</button><button onClick={() => setActiveState("community")} className="bg-transparent border border-#E6E8E8 text-black py-2 md:py-4 px-6 md:px-8 text-base rounded-full">About our community</button>
           </div>
         </div>
         {activeState === "satori" ? (
-          <div className="px-36">
-            <div className="app-container text-center max-auto px-4 py-8 md:px-8 lg:px-16  sm:px-4  pb-16">
-              <Accordion className="px-10 pt-[10px] pb-[20px]">
+          <div className="lg:px-20 md:px-10">
+            <div className="text-center max-auto lg:px-20 md:px-10 px-4 pb-16">
+              <Accordion className="pt-[10px] pb-[20px] p-[4px]">
                 {faqData.map((item) => (
                   <AccordionItem key={item.id}>
-                    <h3
-                      className={`${openAccordionId === item.id ? 'border-none' : 'border-b'} px-4 pb-[16px] pt-[40px] accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-2xl md:text-base sm:text-sm`}
-                      onClick={() => toggleAccordion(item.id)}
-                    >
-                      <div className="w-60 md:w-full">
-                        <span className="mr-2">{item.question}</span>
-                      </div>
-                      <div className="w-40 md:w-full flex items-center justify-end">
+                    <h3 className={`${openAccordionId === item.id ? 'border-none' : 'border-b'}  pb-[16px] pt-[40px] accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-xl md:text-lg text-base`}
+                      onClick={() => toggleAccordion(item.id)}>
+                      <div className="sm-width1"><span className="mr-2 ">{item.question}</span></div>
+                      <div className=" flex items-center justify-end sm-width2">
                         {openAccordionId === item.id ? (
                           <BiChevronUp className="border-black border rounded-full" />
                         ) : (
-                          <span className="flex items-center">
+                          <span className="flex items-center ">
                             5 openings <span className="ml-1" />{" "}
                             <BiChevronDown className="border-black border rounded-full" />
-                          </span>
-                        )}
+                          </span>)}
                       </div>
                     </h3>
-                    <div
-                      className={`accordion-content ${
+                    <div className={`accordion-content ${
                         openAccordionId === item.id ? "block" : "hidden"
-                      } border-b pt-5 text-justify xl:text-xl md:text-base sm:text-sm pb-[20px] px-[16px]`}
-                    >
+                      } border-b pt-5 text-justify xl:text-lg md:text-base text-sm pb-[20px]`}>
                       {item.answer}
                     </div>
                   </AccordionItem>

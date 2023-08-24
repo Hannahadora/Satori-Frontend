@@ -16,19 +16,19 @@ const CommunityPage: React.FC = () => {
 
   return (
     <>
-    <div className="px-36">
-        <div className="app-container text-center max-auto  py-8  px-4 py-8 md:px-8 lg:px-16  sm:px-4  pb-16 pb-16">
-          <Accordion className="px-10 pt-[10px] pb-[20px]">
+    <div className="">
+        <div className="app-container text-center lg:px-20 md:px-10 ">
+          <Accordion className="pt-[10px] pb-[20px]">
             {CommunityFaqData.map((item) => (
            <AccordionItem key={item.id}>
            <h3
-             className={`${openAccordionId === item.id ? 'border-none' : 'border-b'} px-4 pb-[16px] pt-[40px] accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-2xl md:text-base sm:text-sm`}
+             className={`${openAccordionId === item.id ? 'border-none' : 'border-b'}  pb-[16px] pt-[40px] accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-xl md:text-lg text-base`}
              onClick={() => toggleAccordion(item.id)}
            >
-             <div className="w-60 md:w-full">
-               <span className="mr-2">{item.question}</span>
+             <div className="sm-width1">
+               <span className="mr-2 ">{item.question}</span>
              </div>
-             <div className="w-40 md:w-full flex items-center justify-end">
+             <div className=" flex items-center justify-end sm-width2">
                {openAccordionId === item.id ? (
                  <BiChevronUp className="border-black border rounded-full" />
                ) : (

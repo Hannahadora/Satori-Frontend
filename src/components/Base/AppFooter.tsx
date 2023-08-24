@@ -77,13 +77,13 @@ const Footer = () => {
             <p className="text-[#F9F9F9] mb-[16px] text-[14px] fomt-[600]">
               Legal
             </p>
-            <Link className="mb-[12px]" to="/">
+            <Link className="mb-[12px]" to="/terms-of-use">
               Terms
             </Link>
             <Link className="mb-[12px]" to="/privacy-policy">
               Privacy policy
             </Link>
-            <Link className="mb-[12px]" to="/">
+            <Link className="mb-[12px]" to="/cookies">
               Cookies
             </Link>
           </div>
