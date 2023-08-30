@@ -7,6 +7,7 @@ import {
 import communityIcon from "../assets/icons/people_icon.svg";
 import satoriIcon from "../assets/images/satori-part-logo.png";
 import { Link } from "react-router-dom";
+import AvatarGroupSec from "../components/FAQcomponents/AvatarGroupSec";
 
 const HelpAndSupport = () => {
   return (
@@ -28,9 +29,9 @@ const HelpAndSupport = () => {
         <div className="md:mt-[112px] mt-[80px]">
           <div className="w-full flex flex-row flex-wrap items-start xl:justify-between justify-center xl:space-x-0 lg:space-x-[24px] md:space-x-[16px] ">
             <Link to={"/help-and-support/account-settings"}>
-              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:border-2 hover:border-[#0e606e] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
+              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] text-[ text-[#0A0E0F] hover:text-[#F9F9F9] hover:bg-[#0E606E] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
                 <BiSolidUser className="w-[60px] h-[60px]" />
-                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600] text-[#0A0E0F]">
+                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600]">
                   Account Settings
                 </p>
                 <p className="h-[112px] md:text-[20px] text-[18px] mt-[8px]">
@@ -40,9 +41,9 @@ const HelpAndSupport = () => {
               </article>
             </Link>
             <Link to={"/help-and-support/login-and-password"}>
-              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:border-2 hover:border-[#0e606e] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
+              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:text-[#F9F9F9] hover:bg-[#0E606E] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
                 <BiSolidKey className="w-[60px] h-[60px]" />
-                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600] text-[#0A0E0F]">
+                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600]">
                   Login and password
                 </p>
                 <p className="h-[112px] md:text-[20px] text-[18px] mt-[8px]">
@@ -52,9 +53,9 @@ const HelpAndSupport = () => {
               </article>
             </Link>
             <Link to={"/help-and-support/privacy-and-security"}>
-              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:border-2 hover:border-[#0e606e] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
+              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:text-[#F9F9F9] hover:bg-[#0E606E] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
                 <BiSolidLock className="w-[60px] h-[60px]" />
-                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600] text-[#0A0E0F]">
+                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600]">
                   Privacy and security
                 </p>
                 <p className="h-[112px] md:text-[20px] text-[18px] mt-[8px]">
@@ -64,13 +65,13 @@ const HelpAndSupport = () => {
               </article>
             </Link>
             <Link to={"/help-and-support/using-satori"}>
-              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:border-2 hover:border-[#0e606e] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
+              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:text-[#F9F9F9] hover:bg-[#0E606E] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
                 <img
                   className="w-[60px] h-[60px]"
                   src={satoriIcon}
                   alt="satori"
                 />
-                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600] text-[#0A0E0F]">
+                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600]">
                   Using Satori
                 </p>
                 <p className="h-[112px] md:text-[20px] text-[18px] mt-[8px]">
@@ -82,13 +83,13 @@ const HelpAndSupport = () => {
               className="md:w-auto w-full"
               to={"/help-and-support/community"}
             >
-              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:border-2 hover:border-[#0e606e] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
+              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:text-[#F9F9F9] hover:bg-[#0E606E] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
                 <img
                   className="w-[60px] h-[60px]"
                   src={communityIcon}
                   alt="people"
                 />
-                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600] text-[#0A0E0F]">
+                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600]">
                   Community
                 </p>
                 <p className="h-[112px] md:text-[20px] text-[18px] mt-[8px]">
@@ -100,9 +101,9 @@ const HelpAndSupport = () => {
               className="md:w-auto w-full"
               to={"/help-and-support/our-blog"}
             >
-              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:border-2 hover:border-[#0e606e] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
+              <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:text-[#F9F9F9] hover:bg-[#0E606E] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
                 <BiSolidNotepad className="w-[60px] h-[60px]" />
-                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600] text-[#0A0E0F]">
+                <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600]">
                   Satori Blog
                 </p>
                 <p className="h-[112px] md:text-[20px] text-[18px] mt-[8px]">
@@ -111,6 +112,10 @@ const HelpAndSupport = () => {
               </article>
             </Link>
           </div>
+        </div>
+
+        <div className="md:my-[80px] my-[60px]">
+        <AvatarGroupSec />
         </div>
       </div>
     </main>

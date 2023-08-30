@@ -18,6 +18,9 @@ import {
   OurBlog,
   Cookies,
   Terms,
+  OurPartners,
+  ReportAbuse,
+  Careers,
 } from "./pages/index";
 import AppLoading from "./components/AppLoading";
 import MainLayout from "./layout/MainLayout";
@@ -71,9 +74,15 @@ function App() {
                 path="/help-and-support/using-satori"
                 element={<UsingSatori />}
               />
+              <Route
+                path="/help-and-support/report-abuse"
+                element={<ReportAbuse />}
+              />
               <Route path="/help-and-support/our-blog" element={<OurBlog />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/terms-of-use" element={<Terms />} />
+              <Route path="/our-partners" element={<OurPartners />} />
+              <Route path="/careers" element={<Careers />} />
             </Route>
           </Routes>
         </Router>

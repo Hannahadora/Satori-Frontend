@@ -50,7 +50,7 @@ const PrivacyAndSecurity = () => {
               </p>
             </article>
           </Link>
-          <Link to={"/help-and-support/reporting-abuse"}>
+          <Link to={"/help-and-support/report-abuse"}>
             <article className="lg:max-w-[385px] md:max-w-[300px] w-[100%] hover:border-2 hover:border-[#0e606e] md:mb-[80px] mb-[40px] lg:px-[32px] px-[30px] lg:py-[32px] py-[30px] bg-[#F1FBFD] rounded-[32px] text-center flex flex-col items-center justify-center">
               <BiSolidKey className="w-[60px] h-[60px]" />
               <p className="md:mt-[24px] mt-[18px] md:text-[24px] text-[20px] font-[600] text-[#0A0E0F]">
