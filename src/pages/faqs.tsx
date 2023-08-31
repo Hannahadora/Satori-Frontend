@@ -46,7 +46,7 @@ const FAQpage: React.FC = () => {
                           <BiChevronUp className="border-black border rounded-full" />
                         ) : (
                           <span className="flex items-center ">
-                            5 openings <span className="ml-1" />{" "}
+                            <span className="ml-1" />{" "}
                             <BiChevronDown className="border-black border rounded-full" />
                           </span>)}
                       </div>

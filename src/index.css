@@ -80,6 +80,28 @@ background-color:#0e606e ;
 color:#ffffff ;
 }
 
+.--accent-color-main {
+  color: #0e606e; 
+}
+.custom-gray-11 {
+  color: #555E5F; 
+}
+.--gray-9 {
+  color: #808C8E; 
+}
+
+.--c-yellow-07{
+  color:  #D0923F; 
+}
+.--accent-color-11 {
+  color: #094049; 
+}
+.--gray-04 {
+  color: #D3D7D7; 
+}
+.--gray-14 {
+  color: #010809; 
+}
 .team-profile{
 margin: 10px;
 padding: 2px! important;
@@ -156,10 +178,12 @@ object-fit: cover;
   .heroImg-width2{
     width: 100%;
   }
-  .sm-width1,
-  .sm-width2
-  {
-    width: 50%;
+  .sm-width2{
+    width: 20%;
+  }
+ 
+  .sm-width1{
+    width: 80%;
   }
   
 }
