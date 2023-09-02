@@ -4,8 +4,10 @@ import careerBenefits from "../../public/json/careerBenefits";
 import { useState } from "react";
 import {IJobData, IJobRole, jobOpenings} from '../../public/json/jobOpenings'
 import { BiChevronDownCircle, BiChevronRightCircle, BiChevronUpCircle } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const careers = () => {
+  const navigate = useNavigate()
     // Use an array of boolean states to manage whether each job's answer is shown or not
     const [showOpenings, setShowOpenings] = useState(new Array(jobOpenings.length).fill(false));
 
@@ -73,7 +75,7 @@ const careers = () => {
           <p className="font-[600] lg:text-[48px] md:text-[45px] text-[36px] text-center text-[#010809] leading-[60px]">
             Open Roles
           </p>
-          <p className="mx-auto md:w-[60%] w-[80%] text-[#555E5F] font-[500] lg:text-[24px] md:text-[20px] text-[18px] leading-[34px] text-center">
+          <p className="mx-auto mt-[24px] md:w-[60%] w-[80%] text-[#555E5F] font-[500] lg:text-[24px] md:text-[20px] text-[18px] leading-[34px] text-center">
             We’re growing fast, and looking for smart, passionate and talented
             people with great attitudes to join our team. Here’s what’s open
             right now.
@@ -119,7 +121,9 @@ const careers = () => {
                         <p className="mt-[10px] text-[#353B3C]">{role.title}</p>
                         <div className="mt-[10px] flex">
                         <p className="mr-[16px] text-[#353B3C]">{role.type}</p>
-                        <BiChevronRightCircle className="cursor-pointer" />
+                        <button onClick={() => navigate(`/careers/${job.category.toLowerCase()}/${role.id}`)} >
+                        <BiChevronRightCircle className="cursor-pointer"/>
+                        </button>
                         </div>
                       </div>
                       ))
