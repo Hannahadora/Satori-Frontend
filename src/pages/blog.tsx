@@ -5,6 +5,8 @@ import BecomeBlogger from '../components/blog/BecomeBlogger';
 import AllPostsData from '../components/blog/AllPostsData';
 import AllPosts from '../components/blog/AllPosts';
 import '../style/blog.css'
+import next from '../../src/assets/images/nextArrow.png'
+import prev from '../../src/assets/images/prevArrow.png'
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -60,7 +62,7 @@ const Blog = () => {
               <h2 className="text-[32px] font-semibold mb-2 text-justify pt-4">
                 What is Mental health and why is it important?
               </h2>
-              <p className="text-justify --gray-14">
+              <p className="text-justify gray-14">
                 Mental health is a state of mental well-being that enables
                 people to cope with the stresses of life, realize their
                 abilities, learn well and work well, and contribute to their
@@ -76,22 +78,21 @@ const Blog = () => {
 
         <div className="flex pb-20 flex-col space-y-4 sm:space-y-0 sm:flex-row sm:justify-between border-t border-gray-300 pt-4">
           <div>
-            <span>prev</span>
+            <img src={prev}alt="" />
           </div>
-          <div className="flex space-x-6 items-center --gray-14 cursor-pointer">
-            <span className={selectedSpan === 1 ? 'active-span' : ''} onClick={() => handleSpanClick(1)}>1</span>
-            <span className={selectedSpan === 2 ? 'active-span' : ''} onClick={() => handleSpanClick(2)}>2</span>
-            <span className={selectedSpan === 3 ? 'active-span' : ''} onClick={() => handleSpanClick(3)}>3</span>
-            <span className={selectedSpan === 4 ? 'active-span' : ''} onClick={() => handleSpanClick(4)}>4</span>
-            <span className={selectedSpan === 5 ? 'active-span' : ''} onClick={() => handleSpanClick(5)}>5</span>
-            <span className={selectedSpan === 6 ? 'active-span' : ''} onClick={() => handleSpanClick(6)}>6</span>
-            <span className={selectedSpan === 7 ? 'active-span' : ''} onClick={() => handleSpanClick(7)}>7</span>
-            <span className={selectedSpan === 8 ? 'active-span' : ''} onClick={() => handleSpanClick(8)}>8</span>
-            <span className={selectedSpan === 9 ? 'active-span' : ''} onClick={() => handleSpanClick(9)}>9</span>
-            <span className={selectedSpan === 10 ? 'active-span' : ''} onClick={() => handleSpanClick(10)}>10</span>
+          <div className="flex space-x-6 items-center gray-14 cursor-pointer">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((spanNumber) => (
+            <span
+              key={spanNumber}
+              className={selectedSpan === spanNumber ? 'active-span' : ''}
+              onClick={() => setSelectedSpan(spanNumber)}
+            >
+              {spanNumber}
+            </span>
+          ))}
         </div>
           <div>
-            <span>next</span>
+            <img src={next} alt="" />
           </div>
         </div>
       </div>
