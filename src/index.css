@@ -80,28 +80,52 @@ background-color:#0e606e ;
 color:#ffffff ;
 }
 
-.--accent-color-main {
+.accent-color-main {
   color: #0e606e; 
 }
+.bg-accent-color-02{
+  background-color: #9BE6F2;
+}
+
 .custom-gray-11 {
   color: #555E5F; 
 }
-.--gray-9 {
+.gray-9 {
   color: #808C8E; 
 }
 
-.--c-yellow-07{
+.yellow-07{
   color:  #D0923F; 
 }
-.--accent-color-11 {
+.accent-color-11 {
   color: #094049; 
 }
-.--gray-04 {
+.gray-04 {
   color: #D3D7D7; 
 }
-.--gray-14 {
+
+.gray-14 {
   color: #010809; 
 }
+.active-span {
+  border-radius: 8px;
+  background-color: #F9F9F9;
+  width: 40px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.active-span:hover {
+  background-color: #F9F9F9; 
+}
+.accent-color-10{
+  color: #0D5865;
+}
+
+.gray-12{
+  color: #353B3C;
+}
+
 .team-profile{
 margin: 10px;
 padding: 2px! important;

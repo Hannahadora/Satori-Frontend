@@ -1,10 +1,7 @@
 import Heroimg1 from '../assets/images/faq/Heroimg1.png'
 import Heroimg2 from '../assets/images/faq/Heroimg2.png'
-// import WhoImg from '../assets/images/faq/Who we are.png'
 import Team from '../components/AboutUs/Team'
 import Mission from '../components/AboutUs/Mission';
-
-
 
 function AboutUs() {
     return (
@@ -26,7 +23,7 @@ function AboutUs() {
 
 <div className='flex flex-col lg:gap-11 lg:px-20 px-5  pt-4 lg:flex-row'>
     <div className='w-full lg:w-[282px]'>
-      <h1 className='text-2xl lg:text-3xl'>Who <span className='--accent-color-main'>we are</span></h1>
+      <h1 className='text-2xl lg:text-3xl'>Who <span className='accent-color-main'>we are</span></h1>
     </div>
     <div className='w-full lg:w-[792px] pt-5'>
       <p className='lg:text-xl md:text-lg text-base text-centertext-justify'>

@@ -2,7 +2,7 @@ const Terms=()=>{
     return(
     <div className="lg:w-[70%] md-[60%] w-full mx-auto mt-[130px]">
         <div className="app-container text-center text-gray-500">
-        <h3 className="text-[56px] md:text-[52px] text-[50px] text-center py-4 lg:leading-p[70px] font-[700] text-[#010809] text-center">Satori Terms of Use</h3>
+        <h3 className="text-[40px] lg:text-[56px] md:text-[45px] text-center py-4 lg:leading-p[70px] font-[700] text-[#010809] text-center">Satori Terms of Use</h3>
         <p className="text-[22px]  text-center text-black py-4"><b>Effective Date: 30th September, 2023</b></p>
         <p className="text-[22px]  text-center py-4">These Terms of use outline the rules and regulations for the use of our services and products. By accessing or using our app, you agree to comply with these terms. If you do not agree with any part of these terms, please do not use our services.</p>
         <h3 className="text-[36px] pt-14">Intellectual property rights</h3>

@@ -4,7 +4,7 @@ const cookies=()=>{
         <div className="mt-[130px]">
             <div className="app-container">
                  <div className="lg:w-[70%] md-[60%] w-full mx-auto text-gray-500 text-[22px]">
-                    <h3 className="lg:text-[54px]   lg:leading-p[70px] font-[700] text-[#010809] text-center">Satori Cookie Policy</h3>
+                    <h3 className="text-[40px] lg:text-[56px] md:text-[45px] lg:leading-p[70px] font-[700] text-[#010809] text-center">Satori Cookie Policy</h3>
                     <p className="lg:text-[22px] sm:text-[10px] text-center text-black pt-4 font-[600]">Effective Date: 30th September, 2023</p>
                     <p className=" text-center pt-4">This Cookie Policy explains how we use cookies and similar tracking technologies on our website. By using the Website, you consent to the use of cookies as described in this policy.</p>
                     <h3 className="text-[36px] text-center pt-14">What are cookies?</h3>

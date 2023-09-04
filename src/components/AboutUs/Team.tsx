@@ -35,7 +35,7 @@ function TeamSection() {
                     <h3 className='xl:text-3xl md:text-2xl sm:text-lg text-accent-color-main p-2'>Sandra Alabi</h3>
                     <p className='ps-2 xl:text-2xl md:text-1xl sm:text-lg'>Co Founder & CEO</p>
                     <p className='p-2 xl:text-lg md:text-base sm:text-sm'>A passionate visionary leading with innovation and integrity, driving company success through purposeful leadership.</p>
-                    <div className='flex gap-5 pt-3'>
+                    <div className='flex gap-5 py-3 '>
                     <Link className="" to=" "target="_blank"><img src={instagram} alt="instagram" /></Link>
                     <Link className="" to=" "target="_blank"><img src={twitter} alt="twitter" /></Link>
                     <Link className="" to=" "target="_blank"><img src={linkedIn} alt="linkedIn" /></Link>
@@ -74,7 +74,7 @@ function TeamSection() {
                     <h3 className='xl:text-3xl md:text-2xl sm:text-lg text-accent-color-main p-2'>Gabriel Nancy</h3>
                     <p className='ps-2 xl:text-2xl md:text-1xl sm:text-lg'>Frontend Developer</p>
                     <p className='p-2 xl:text-lg md:text-base sm:text-sm'>Front-end magician crafting pixel-perfect interfaces into captivating and seamless user interfaces.</p>
-                    <div className='flex gap-5 pt-3'>
+                    <div className='flex gap-5 pt-3 py-3'>
                     <Link className="" to=" "target="_blank"><img src={instagram} alt="instagram" /></Link>
                     <Link className="" to=" "target="_blank"><img src={twitter} alt="twitter" /></Link>
                     <Link className="" to=" "target="_blank"><img src={linkedIn} alt="linkedIn" /></Link>
@@ -114,7 +114,7 @@ function TeamSection() {
                     <h3 className='xl:text-3xl md:text-2xl sm:text-lg text-accent-color-main p-2'>Jane Ifunanyachukwu</h3>
                     <p className='ps-2 xl:text-2xl md:text-2xl sm:text-lg'>Digital Assets Manager</p>
                     <p className='p-2 xl:text-lg md:text-base sm:text-sm'>Social media virtuoso building connections and driving engagement with strategic storytelling</p>
-                    <div className='flex gap-5 pt-3'>
+                    <div className='flex gap-5 pt-3 py-3'>
                     <Link className="" to=" "target="_blank"><img src={instagram} alt="instagram" /></Link>
                     <Link className="" to=" "target="_blank"><img src={twitter} alt="twitter" /></Link>
                     <Link className="" to=" "target="_blank"><img src={linkedIn} alt="linkedIn" /></Link>
@@ -150,7 +150,7 @@ function TeamSection() {
                     <h3 className='xl:text-3xl md:text-2xl sm:text-lg text-accent-color-main p-2'>Akinola Akinleye</h3>
                     <p className='ps-2 xl:text-2xl md:text-2xl sm:text-lg'>fullstack Developer</p>
                     <p className='p-2 xl:text-lg md:text-base sm:text-sm'>Creating robust and user-centric applications with expertise in both front-end and back-end technologies</p>
-                    <div className='flex gap-5 pt-3'>
+                    <div className='flex gap-5 pt-3 py-3'>
                     <Link className="" to=" "target="_blank"><img src={instagram} alt="instagram" /></Link>
                     <Link className="" to=" "target="_blank"><img src={twitter} alt="twitter" /></Link>
                     <Link className="" to=" "target="_blank"><img src={linkedIn} alt="linkedIn" /></Link>
