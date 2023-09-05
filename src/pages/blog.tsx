@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import HeroImg from '../assets/images/dummy/blogHero.png';
 import BecomeBlogger from '../components/blog/BecomeBlogger';
@@ -18,6 +18,22 @@ const Blog = () => {
 
   const getStarted = () => {
     navigate('/join-waitlist');
+  };
+
+  useEffect(() => {
+    if (selectedSpan < 1) {
+      setSelectedSpan(1);
+    } else if (selectedSpan > 10) {
+      setSelectedSpan(10);
+    }
+  }, [selectedSpan]);
+
+  const handlePrevClick = () => {
+    setSelectedSpan(selectedSpan - 1);
+  };
+
+  const handleNextClick = () => {
+    setSelectedSpan(selectedSpan + 1);
   };
 
   return (
@@ -77,22 +93,22 @@ const Blog = () => {
         </div>
 
         <div className="flex pb-20 flex-col space-y-4 sm:space-y-0 sm:flex-row sm:justify-between border-t border-gray-300 pt-4">
-          <div>
-            <img src={prev}alt="" />
+        <div>
+            <img src={prev} alt="" onClick={handlePrevClick} className="cursor-pointer" />
           </div>
           <div className="flex space-x-6 items-center gray-14 cursor-pointer">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((spanNumber) => (
-            <span
-              key={spanNumber}
-              className={selectedSpan === spanNumber ? 'active-span' : ''}
-              onClick={() => setSelectedSpan(spanNumber)}
-            >
-              {spanNumber}
-            </span>
-          ))}
-        </div>
-          <div>
-            <img src={next} alt="" />
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((spanNumber) => (
+              <span
+                key={spanNumber}
+                className={selectedSpan === spanNumber ? 'active-span' : ''}
+                onClick={() => setSelectedSpan(spanNumber)}
+              >
+                {spanNumber}
+              </span>
+            ))}
+          </div>
+        <div>
+            <img src={next} alt="" onClick={handleNextClick} className="cursor-pointer" />
           </div>
         </div>
       </div>
