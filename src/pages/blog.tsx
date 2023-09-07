@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import HeroImg from '../assets/images/dummy/blogHero.png';
 import BecomeBlogger from '../components/blog/BecomeBlogger';
+import LatestArticlesData from '../components/blog/LatestArticlesData';
 import AllPostsData from '../components/blog/AllPostsData';
 import AllPosts from '../components/blog/AllPosts';
-import '../style/blog.css'
-import next from '../../src/assets/images/nextArrow.png'
-import prev from '../../src/assets/images/prevArrow.png'
+import '../style/blog.css';
+import next from '../../src/assets/images/nextArrow.png';
+import prev from '../../src/assets/images/prevArrow.png';
+import LatestArticles from '../components/blog/LatestArticles';
 
 const Blog = () => {
   const navigate = useNavigate();
-  const [selectedSpan, setSelectedSpan] = useState(1); 
+  const [selectedSpan, setSelectedSpan] = useState(1);
 
-  const handleSpanClick = (spanId : number) => {
+  const handleSpanClick = (spanId: number) => {
     setSelectedSpan(spanId);
   };
 
@@ -39,14 +40,11 @@ const Blog = () => {
   return (
     <div className="lg:w-[70%] md-[60%] w-full mx-auto mt-36 text-center text-[22px]">
       <div className="app-container text-center text-gray-500">
-        
-
         <h1 className="lg:text-[56px] md:text-[52px] text-[50px] lg:leading-[70px] font-bold">
           Stories and Articles
         </h1>
         <p className="pt-8">
-          Subscribe to learn about new product features, the latest in
-          technology, solutions, and updates.
+          Subscribe to learn about new product features, the latest in technology, solutions, and updates.
         </p>
         <div className="flex justify-center items-center pt-8">
           <form className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
@@ -65,35 +63,16 @@ const Blog = () => {
           </form>
         </div>
         <p className="pt-2 pe-14">We care about your data in our privacy policy</p>
-
-        <div className="pt-16">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-            <div className="w-569 h-266">
-              <img src={HeroImg} alt="" className="object-cover" />
-            </div>
-            <div className="w-[100%] h-266 flex flex-col justify-center">
-              <p className="yellow-07 text-[20px] text-left">
-                Latest Article
-              </p>
-              <h2 className="text-[32px] font-semibold mb-2 text-justify pt-4">
-                What is Mental health and why is it important?
-              </h2>
-              <p className="text-justify gray-14">
-                Mental health is a state of mental well-being that enables
-                people to cope with the stresses of life, realize their
-                abilities, learn well and work well, and contribute to their
-                community.
-              </p>
-            </div>
-          </div>
-        </div>
+        {LatestArticlesData.map((article) => (
+          <LatestArticles key={article.id} post={article} />
+        ))}
         <AllPosts posts={AllPostsData} selectedId={selectedSpan} onSpanClick={handleSpanClick} />
-        <div className='p-20 '>
-          <BecomeBlogger  />
+        <div className="p-20">
+          <BecomeBlogger />
         </div>
 
         <div className="flex pb-20 flex-col space-y-4 sm:space-y-0 sm:flex-row sm:justify-between border-t border-gray-300 pt-4">
-        <div>
+          <div>
             <img src={prev} alt="" onClick={handlePrevClick} className="cursor-pointer" />
           </div>
           <div className="flex space-x-6 items-center gray-14 cursor-pointer">

@@ -4,10 +4,16 @@ import About3 from '../../assets/images/faq/About3.png';
 import mission from '../../assets/images/faq/Mission.png';
 import vision from '../../assets/images/faq/Vision.png';
 import value from '../../assets/images/faq/Values.png';
+import Underlay1 from '../../assets/images/faq/leftunderlay.png';
+// import Underlay2 from '../../assets/images/faq/rightunderlay.png';
 
   function Mission() {
     return (
-      <div className='flex flex-col gap-8 py-20 mt-20 lg:px-20 px-5 lg:text-xl md:text-lg sm:text-base bg-accent-color-02'>
+      <div className='relative flex flex-col gap-8 py-20 mt-20 lg:px-20 px-5 lg:text-xl md:text-lg sm:text-base bg-accent-color-02'>
+         <div className="absolute inset-0 bg-underlay bg-cover bg-center z-0">
+          <img src={Underlay1} alt="" className="lg:w-20 md:w-15 w-10" />
+          </div>
+
         <div className='flex flex-col md:flex-row gap-8'>
           <div className='w-[100%]  '>
             <img src={About1} alt="picture" />
@@ -32,6 +38,10 @@ import value from '../../assets/images/faq/Values.png';
           <div className='w-[100%]'>
             <img src={About3} alt="picture" />
           </div>
+
+          {/* <div className="absolute bottom-0 right-0 bg-underlay bg-cover bg-center z-0">
+          <img src={Underlay2} alt="" className="lg:w-40 md:w-30 w-20 " />
+          </div> */}
           <div className='w-full py-20'>
             <img src={value} alt="" className='pb-4 sm-[5%] md-[50%]' />
             <p className='accent-color-11 text-justify'>We are driven by empathy, compassion and fostering a safe and inclusive space for individuals to grow on their emotional journeys. We value evidence-based practices, ensuring the effectiveness and relevance of our mental health support. User-centric design and continuous growth guide our approach, as we prioritize privacy, transparency, and authentic connections within our community. These core values inspire us daily, empowering individuals worldwide to find inner balance, personal growth, and lasting well-being.</p>
