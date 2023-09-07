@@ -21,6 +21,7 @@ import {
   OurPartners,
   ReportAbuse,
   Careers,
+  Blog,
 } from "./pages/index";
 import AppLoading from "./components/AppLoading";
 import MainLayout from "./layout/MainLayout";
@@ -81,6 +82,7 @@ function App() {
               <Route path="/help-and-support/our-blog" element={<OurBlog />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/terms-of-use" element={<Terms />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/our-partners" element={<OurPartners />} />
               <Route path="/careers" element={<Careers />} />
             </Route>

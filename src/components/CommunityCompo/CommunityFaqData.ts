@@ -28,22 +28,22 @@ interface communityFaqItem{
     {
         id: 5,
         question: " Can I share my personal mental health experiences in the community?",
-        answer: "Sharing personal mental health experiences is often encouraged in mental health communities. It can help foster a sense of connection and support among members who may relate to similar struggles.",
+        answer: " Yes, we encourage sharing of personal mental health experiences in our community. It can help foster a sense of connection and support among members who may relate to similar struggles.",
       },
     {
         id: 6,
         question: " Are there moderators or professionals overseeing the community?",
-        answer: " The Satori Mental Health Community has moderators or mental health professionals who oversee and ensure the community's safe and respectful environment. They also provide guidance and support when needed.",
+        answer: "Yes, the Satori Mental Health Community has moderators and mental health professionals who oversee and ensure the community's safe and respectful environment. They also provide guidance and support when needed",
       },
     {
         id: 7,
         question: "Can I seek professional advice in the community? ",
-        answer: " Yes, you can seek professional advice from the community. We have professional therapists available to reply to your concerns in the community. You’ll know them using the pro badge (the badge icon will be inserted here)",
+        answer: "Yes, you can seek professional advice from the community. We have professional therapists available to reply to your concerns in the community. You’ll know them using the Zen master badge (the badge icon will be inserted here).",
       },
     {
         id: 8,
         question: " What are badges?",
-        answer: " Satori, due to the anonymity nature of our community, we use badges or tags to denote professional accounts. This will help you differentiate which advice are professional and individual experiences. We also have badges for different profile levels which include Seeker, Voyager, Trailblazer, Ambassador, Zen master and Sage. These profile levels represent your app usage and engagements. Use the app often to transit from one level to another.",
+        answer: "At Satori, due to the anonymity nature of our community, we use badges or tags to denote professional accounts. This will help you differentiate which advice are professional and individual experiences. We also have badges for different profile levels and user groups which include Seeker, Voyager, Trailblazer, Ambassador, Sage and Zen master. These profile levels represent your app usage, engagements and user groups. Our verified and certified mental health professionals have the Zen master badges, mental health advocates have the Ambassador and sage badges while other users have the seeker, voyager and the trailblazer badges. Use the app often to transit from one level to another.",
       },
  ]
  export default communityFaqData
