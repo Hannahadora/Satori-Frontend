@@ -16,7 +16,7 @@ const Header = () => {
               </span>{" "}
               <br /> and Empower your life
             </p>
-            <p className="lg:mb-[120px] mb-[60px] lg:text-[24px] text-[16px] lg:leading-[34px]">
+            <p className="lg:mb-[40px] mb-[20px] lg:text-[24px] text-[16px] lg:leading-[34px]">
               Embrace a healthier mind and happier life with Satori, your path
               to mental well-being and personal growth.
             </p>

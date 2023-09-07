@@ -39,8 +39,9 @@ const Reviews = () => {
           ))}
       </div>
 
-      <div className="flex items-center justify-center">
-        <button className="sec-btn text-[18px] px-[16px] py-[8px] rounded-[100px]">View all</button>
+      <div className="flex flex-col items-center justify-center">
+        <p className="md:text-[22px] text-[20px] mb-[20px] text-[#555E5F] text-center">Want to get featured?</p>
+        <button className="sec-btn text-[18px] px-[16px] py-[8px] rounded-[100px]">Rate us</button>
       </div>
     </div>
   );

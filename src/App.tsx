@@ -21,6 +21,7 @@ import {
   OurPartners,
   ReportAbuse,
   Careers,
+  JobDetails,
   Blog,
 } from "./pages/index";
 import AppLoading from "./components/AppLoading";
@@ -85,6 +86,7 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/our-partners" element={<OurPartners />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/careers/:jobCategory/:jobId" element={<JobDetails />} />
             </Route>
           </Routes>
         </Router>

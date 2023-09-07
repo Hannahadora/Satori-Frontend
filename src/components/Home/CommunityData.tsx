@@ -21,7 +21,7 @@ const CommunityData = () => {
                 <p className="text-[#353B3C]">Enthusiasts</p>
             </div>
         </div>
-        <div className="lg:w-[30%] md:w-[50%] w-auto mx-auto flex items-center justify-center">
+        <div className="lg:w-[20%] md:w-[50%] w-auto mx-auto flex items-center justify-center">
         <button className="w-full pry-btn text-[18px] px-[16px] py-[8px] rounded-[100px]">Join Now</button>
       </div>
       </main>

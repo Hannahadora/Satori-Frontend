@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import footerLogo from "../../assets/images/footer-logo.png";
 import facebook_icon from "../../assets/icons/facebook-icon.svg";
 import twitter_icon from "../../assets/icons/twitter-icon.svg";
@@ -16,12 +16,12 @@ const Footer = () => {
             <img src={footerLogo} alt="logo" />
           </Link>
           <div className="md:pt-[40px]">
-          <p className="text-[#fff] font-500 pb-[16px] ">
-            Make a donation to help someone today
-          </p>
-          <button className="pry-btn rounded-[100px] py-[8px] px-[16px]">
-            Make a donation
-          </button>
+            <p className="text-[#fff] font-500 pb-[16px] ">
+              Make a donation to help someone today
+            </p>
+            <button className="pry-btn rounded-[100px] py-[8px] px-[16px]">
+              Make a donation
+            </button>
           </div>
         </div>
         <section className="lg:w-[70%] md:w-[60%] md:mt-[0] mt-[40px] w-full grid md:grid-cols-4 grid-cols-2 items-start justify-between mb-[96px]">
@@ -29,32 +29,95 @@ const Footer = () => {
             <p className="text-[#F9F9F9] mb-[16px] text-[14px] fomt-[600]">
               Company
             </p>
-            <Link className="mb-[12px]" to="/about-us">
+            <NavLink
+              to="/about-us"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               About us
-            </Link>
-            <Link className="mb-[12px]" to="/contact-us">
+            </NavLink>
+            <NavLink
+              to="/contact-us"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               Contact us
-            </Link>
-            <Link className="mb-[12px]" to="/faqs">
+            </NavLink>
+            <NavLink
+              to="/faqs"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               FAQ
-            </Link>
-            <Link className="mb-[12px]" to="/careers">
+            </NavLink>
+            <NavLink
+              to="/careers"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               Careers
-            </Link>
-            <Link className="mb-[12px]" to="/our-partners">
+            </NavLink>
+            <NavLink
+              to="/our-partners"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               Partners
-            </Link>
+            </NavLink>
           </div>
           <div className="footer_nav-links md:mt-[0px] mt-[32px]">
             <p className="text-[#F9F9F9] mb-[16px] text-[14px] fomt-[600]">
               Resources
             </p>
-            <Link className="mb-[12px]" to="/blog">
+            <NavLink
+              to="/blog"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               Blog
-            </Link>
-            <Link className="mb-[12px]" to="/help-and-support">
+            </NavLink>
+            <NavLink
+              to="/help-and-support"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               Help & Support
-            </Link>
+            </NavLink>
           </div>
           <div className="footer_nav-links md:mt-[0px] mt-[32px]">
             <p className="text-[#F9F9F9] mb-[16px] text-[14px] fomt-[600]">
@@ -77,15 +140,42 @@ const Footer = () => {
             <p className="text-[#F9F9F9] mb-[16px] text-[14px] fomt-[600]">
               Legal
             </p>
-            <Link className="mb-[12px]" to="/terms-of-use">
+            <NavLink
+              to="/terms-of-use"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               Terms
-            </Link>
-            <Link className="mb-[12px]" to="/privacy-policy">
+            </NavLink>
+            <NavLink
+              to="/privacy-policy"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               Privacy policy
-            </Link>
-            <Link className="mb-[12px]" to="/cookies">
+            </NavLink>
+            <NavLink
+              to="/cookies"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "border-b border-[#fff] font-[700] mb-[12px]"
+                  : "mb-[12px]"
+              }
+            >
               Cookies
-            </Link>
+            </NavLink>
           </div>
         </section>
       </div>
