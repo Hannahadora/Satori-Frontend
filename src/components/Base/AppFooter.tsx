@@ -41,7 +41,7 @@ const Footer = () => {
             <Link className="mb-[12px]" to="/careers">
               Careers
             </Link>
-            <Link className="mb-[12px]" to="/partners">
+            <Link className="mb-[12px]" to="/our-partners">
               Partners
             </Link>
           </div>
@@ -52,11 +52,8 @@ const Footer = () => {
             <Link className="mb-[12px]" to="/blog">
               Blog
             </Link>
-            <Link className="mb-[12px]" to="/help-centre">
-              Help centre
-            </Link>
-            <Link className="mb-[12px]" to="/support">
-              Support
+            <Link className="mb-[12px]" to="/help-and-support">
+              Help & Support
             </Link>
           </div>
           <div className="footer_nav-links md:mt-[0px] mt-[32px]">

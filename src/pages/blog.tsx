@@ -107,7 +107,7 @@ const Blog = () => {
               </span>
             ))}
           </div>
-        <div>
+          <div>
             <img src={next} alt="" onClick={handleNextClick} className="cursor-pointer" />
           </div>
         </div>

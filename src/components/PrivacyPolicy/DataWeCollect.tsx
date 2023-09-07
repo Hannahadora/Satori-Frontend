@@ -36,15 +36,15 @@ const DataWeCollect = () => {
               categories.
             </p>
             <p className="md:text-[24px] text-[20px] mb-[16px] text-[#353B3C]">
-              Expand the dropdows for more information
+              Expand the dropdowns for more information
             </p>
           </article>
-          <Accordion className="pt-[10px] pb-[20px]">
+          <Accordion className="pb-[20px]">
             <AccordionItem>
               <div
                 className={`${
                   openAccordionId === 1.1 ? "border-b-none" : "border-b"
-                } pb-[16px] pt-[40px] font-600 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-[36px] md:[24px] text-[20px]`}
+                } pb-[16px] md:pt-[40px] pt-[20px] font-600 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-[36px] md:text-[24px] text-[20px]`}
                 onClick={() => toggleAccordion(1.1)}
               >
                 <h3 className="w-[80%]">
@@ -63,16 +63,38 @@ const DataWeCollect = () => {
                   openAccordionId === 1.1 ? "block" : "hidden"
                 } border-b pt-5 text-justify md:text-[20px] text-base pb-[20px] px-[16px]`}
               >
-                ...
+                <p>
+                  Certain information is necessary. In order to use our product
+                  and services, you need to provide us some information.
+                  Likewise, if you use our paid services, we cannot get them to
+                  you without your payment information.
+                </p>
+
+                <ul className="text-[#555E5F] list-disc list-inside">
+                  <li className="mt-[40px]">
+                    <b>Personal information:</b> If you create an account, you
+                    must provide us with some information so that we can provide
+                    our services to you. This includes a display name (for
+                    example, “Satori Mental Health”); a username (for example,
+                    satori.ng) a password; an email address or phone number; a
+                    date of birth; your display language; and third-party single
+                    sign-in information (if you choose this sign-in method). You
+                    can also choose to share your location in your profile. Your
+                    profile information, which includes your display name and
+                    username, is always public, except in the community where
+                    you choose to enter anonymously, but you can use either your
+                    real name or a pseudonym.
+                  </li>
+                </ul>
               </div>
             </AccordionItem>
           </Accordion>
-          <Accordion className="pt-[10px] pb-[20px]">
+          <Accordion className="pb-[20px]">
             <AccordionItem>
               <div
                 className={`${
                   openAccordionId === 1.2 ? "border-b-none" : "border-b"
-                } pb-[16px] pt-[40px] font-600 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-[36px] md:[24px] text-[20px]`}
+                } pb-[16px] md:pt-[40px] pt-[20px] font-600 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-[36px] md:text-[24px] text-[20px]`}
                 onClick={() => toggleAccordion(1.2)}
               >
                 <h3 className="w-[80%]">
@@ -163,12 +185,12 @@ const DataWeCollect = () => {
               </div>
             </AccordionItem>
           </Accordion>
-          <Accordion className="pt-[10px] pb-[20px]">
+          <Accordion className="pb-[20px]">
             <AccordionItem>
               <div
                 className={`${
                   openAccordionId === 1.3 ? "border-b-none" : "border-b"
-                } pb-[16px] pt-[40px] font-600 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-[36px] md:[24px] text-[20px]`}
+                } pb-[16px] md:pt-[40px] pt-[20px] font-600 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-[36px] md:text-[24px] text-[20px]`}
                 onClick={() => toggleAccordion(1.3)}
               >
                 <h3 className="w-[80%]">
@@ -196,14 +218,14 @@ const DataWeCollect = () => {
 
                 <ul className="text-[#555E5F] list-disc list-inside">
                   <li className="mt-[40px]">
-                    <b>Personal information:</b> If you create an account, you must
-                    provide us with some information so that we can provide our
-                    services to you. This includes a display name (for example,
-                    “Satori Mental Health”); a username (for example, satori.ng)
-                    a password; an email address or phone number; a date of
-                    birth; your display language; and third-party single sign-in
-                    information (if you choose this sign-in method). You can
-                    also choose to share your location in your profile. Your
+                    <b>Personal information:</b> If you create an account, you
+                    must provide us with some information so that we can provide
+                    our services to you. This includes a display name (for
+                    example, “Satori Mental Health”); a username (for example,
+                    satori.ng) a password; an email address or phone number; a
+                    date of birth; your display language; and third-party single
+                    sign-in information (if you choose this sign-in method). You
+                    can also choose to share your location in your profile. Your
                     profile information, which includes your display name and
                     username, is always public, except in the community where
                     you choose to enter anonymously, but you can use either your
@@ -213,16 +235,18 @@ const DataWeCollect = () => {
               </div>
             </AccordionItem>
           </Accordion>
-          <Accordion className="pt-[10px] pb-[20px]">
+          <Accordion className="pb-[20px]">
             <AccordionItem>
               <div
                 className={`${
                   openAccordionId === 1.4 ? "border-b-none" : "border-b"
-                } pb-[16px] pt-[40px] font-600 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-[36px] md:[24px] text-[20px]`}
+                } pb-[16px] md:pt-[40px] pt-[20px] font-600 accordion-trigger text-justify flex justify-between cursor-pointer transition-transform ease duration-300 transform xl:text-[36px] md:text-[24px] text-[20px]`}
                 onClick={() => toggleAccordion(1.4)}
               >
                 <h3 className="w-[80%]">
-                  <span className="mr-2">1.4 Information we receive from third parties</span>
+                  <span className="mr-2">
+                    1.4 Information we receive from third parties
+                  </span>
                 </h3>
                 <div className="w-[20%] flex items-center justify-end">
                   {openAccordionId === 1.4 ? (
@@ -237,7 +261,24 @@ const DataWeCollect = () => {
                   openAccordionId === 1.4 ? "block" : "hidden"
                 } border-b pt-5 text-justify md:text-[20px] text-base pb-[20px] px-[16px]`}
               >
-                ...
+                <p>
+                  When you use other online products and services, they may
+                  share information about that usage with us.
+                </p>
+
+                <ul className="text-[#555E5F] list-disc list-inside">
+                  <li className="mt-[40px]">
+                    <b>Account Connections, and Integrations</b>
+                    <br /> We may receive information about you from third
+                    parties such as other Satori users, developers, and partners
+                    who help us evaluate the safety and quality of content on
+                    our platform, and other services you link to your Satori
+                    account. You may choose to connect your Satori account to
+                    your account on another service such as google, and that
+                    other service may send us information about your account on
+                    that service.
+                  </li>
+                </ul>
               </div>
             </AccordionItem>
           </Accordion>

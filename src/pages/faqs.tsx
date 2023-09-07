@@ -20,7 +20,7 @@ const FAQpage: React.FC = () => {
     <>
       <div className="pt-24 lg:w-[100%] md-[60%] w-full mx-auto">
         <div className="app-container text-center">
-          <h3 className="font-semibold mb-2 text-black pt-8 text-4xl font-bol">
+          <h3 className="font-semibold mb-2 text-black pt-8 text-4xl font-bold">
             You’ve got questions?
           </h3>
           <p className="mb-4 text-black text-xl">We’ve got answers!</p>

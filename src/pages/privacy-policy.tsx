@@ -1,13 +1,17 @@
 import BottomBanner from "../components/PrivacyPolicy/BottomBanner";
+import Contact from "../components/PrivacyPolicy/Contact";
 import DataWeCollect from "../components/PrivacyPolicy/DataWeCollect";
 import HowWeUseInfo from "../components/PrivacyPolicy/HowWeUseInfo";
+import PolicyChange from "../components/PrivacyPolicy/PolicyChange";
+import Security from "../components/PrivacyPolicy/Security";
+import TakeControl from "../components/PrivacyPolicy/TakeControl";
 
 const privacyPolicy = () => {
   return (
     <div className="mt-[130px]">
       <div className="app-container">
         <div className="lg:w-[60%] md-[80%] w-full mx-auto">
-        <h3 className="lg:text-[56px] md:text-[45px] text-[35px] lg:leading-p[70px] font-[700] text-[#010809] text-center">
+        <h3 className="lg:text-[56px] md:text-[45px] text-[35px] lg:leading-[70px] font-[700] text-[#010809] text-center">
           Satori Privacy Policy
         </h3>
         <p className="text-[#010809] text-[18px] text-center mt-[12px] font-[500]">
@@ -51,7 +55,7 @@ const privacyPolicy = () => {
           </p>
         </div>
 
-        <div className="w-full flex flex-row flex-wrap items-start justify-between">
+        <div className="w-full flex flex-row flex-wrap items-start xl:justify-between justify-center xl:space-x-0 lg:space-x-[24px] md:space-x-[16px] ">
           <div className="border border-[#C0C5C6] rounded-[16px] p-[16px] text-center max-w-[360px] w-[100%] lg:mb-[80px] md:mb-[40px] mb-[24px]">
             <h5 className="text-[36px] font-[700] text-[#353B3C] mb-[36px]">
               We collect some data about you.
@@ -62,7 +66,7 @@ const privacyPolicy = () => {
             <h5 className="text-[36px] font-[700] text-[#353B3C] mb-[36px]">
             We value and protect your data
             </h5>
-            <a className="text-[16px] font-[700] text-[#0E606E]" href="">Learn how we protect your data</a>
+            <a className="text-[16px] font-[700] text-[#0E606E]" href="#privacy-security">Learn how we protect your data</a>
           </div>
           <div className="border border-[#C0C5C6] rounded-[16px] p-[16px] text-center max-w-[360px] w-[100%] lg:mb-[80px] md:mb-[40px] mb-[24px]">
             <h5 className="text-[36px] font-[700] text-[#353B3C] mb-[36px]">
@@ -80,18 +84,22 @@ const privacyPolicy = () => {
             <h5 className="text-[36px] font-[700] text-[#353B3C] mb-[36px]">
             You can control your experience
             </h5>
-            <a className="text-[16px] font-[700] text-[#0E606E]" href="">Learn how to update your settings</a>
+            <a className="text-[16px] font-[700] text-[#0E606E]" href="#take-control">Learn how to update your settings</a>
           </div>
           <div className="border border-[#C0C5C6] rounded-[16px] p-[16px] text-center max-w-[360px] w-[100%] lg:mb-[80px] md:mb-[40px] mb-[24px]">
             <h5 className="text-[36px] font-[700] text-[#353B3C] mb-[36px]">
             If you have questions, just ask
             </h5>
-            <a className="text-[16px] font-[700] text-[#0E606E]" href="">Learn how to contact us</a>
+            <a className="text-[16px] font-[700] text-[#0E606E]" href="#privacy-contact">Learn how to contact us</a>
           </div>
         </div>
 
         <DataWeCollect />
         <HowWeUseInfo />
+        <Security />
+        <TakeControl />
+        <PolicyChange />
+        <Contact />
         <BottomBanner />
       </div>
     </div>
