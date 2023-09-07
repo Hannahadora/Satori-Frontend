@@ -31,9 +31,16 @@ const WhyChooseUs = () => {
         {reasons.map((el, i) => (
           <div
             key={i}
-            className="px-[20px] py-[28px] rounded-[16px] bg-[#F1FBFD]"
+            className="relative px-[20px] py-[28px] rounded-[16px] bg-[#F1FBFD]"
           >
             <div className="flex flex-col items-center justify-center text-center">
+              {el.comingSoon && (
+                <div className="absolute top-[25px] right-[17px] bg-[#B22D17] rounded-[4px] px-[6px] py-[4px]">
+                  <p className="text-[#fff] text-[16px] font-[700]">
+                    Coming soon
+                  </p>
+                </div>
+              )}
               <div className="w-[60px] h-[60px]">
                 <img
                   src={el.icon}

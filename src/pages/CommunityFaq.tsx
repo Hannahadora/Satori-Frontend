@@ -33,7 +33,7 @@ const CommunityPage: React.FC = () => {
                  <BiChevronUp className="border-black border rounded-full" />
                ) : (
                  <span className="flex items-center">
-                   5 openings <span className="ml-1" />{' '}
+                   <span className="ml-1" />{' '}
                    <BiChevronDown className="border-black border rounded-full" />
                  </span>
                )}
@@ -42,13 +42,14 @@ const CommunityPage: React.FC = () => {
            <div
              className={`accordion-content ${
                openAccordionId === item.id ? 'block' : 'hidden'
-             } border-b pt-5 text-justify xl:text-xl md:text-base sm:text-sm pb-[20px] px-[16px]`}
+             } border-b pt-5 text-justify xl:text-xl md:text-base sm:text-sm pb-[20px]`}
            >
              {item.answer}
            </div>
          </AccordionItem>
             ))}
           </Accordion>
+          <div className='mt-[70px]'></div>
         </div>
         </div>
     </>
