@@ -118,7 +118,7 @@ const AllPostsData: AllPostDataItems[] =[
     },
     {
     id: 1,
-    img: image3,
+    img: image14,
     title: "Lastest Article ",
     heading: "How does Mental health affects your life?",
     content: "Breaking Barriers: An eye-opening look into how mental health barriers can impact your life, and practical strategies to overcome them.",
@@ -217,7 +217,7 @@ const AllPostsData: AllPostDataItems[] =[
     },
     {
     id: 4,
-    img:image12,
+    img:image4,
     title: "Lastest Article",
     heading: "Lorem, ipsum dolor sit amet adipisicing elit. Obcaecati.",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolor soluta accusantium qui amet animi.",
@@ -256,7 +256,7 @@ const AllPostsData: AllPostDataItems[] =[
     
     {
     id: 4,
-    img:image14,
+    img:image13,
     title: "Lastest Article",
     heading: "Lorem, ipsum dolor sit amet adipisicing elit. Obcaecati.",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolor soluta accusantium qui amet animi.",

@@ -2,6 +2,7 @@ import { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CommunityPage from "./pages/CommunityFaq";
+import FullBlogContents from "./components/blog/FullBlogContents";
 import {
   JoinWaitList,
   Home,
@@ -55,6 +56,7 @@ function App() {
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/help-and-support" element={<HelpAndSupport />} />
+              <Route path="/FullBlogContents/:articleId" element={<FullBlogContents />} />
               <Route
                 path="/help-and-support/community"
                 element={<Community />}

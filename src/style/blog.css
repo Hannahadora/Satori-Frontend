@@ -74,3 +74,13 @@
     color: white;
   }
   
+  .custom-hover:hover{
+    color: #0E606E;
+    transition: .3s ease-in;
+  }
+
+  .share-btn{
+    border-radius: 100px;
+    border: 1px solid var(--accent-color-main, #0E606E);
+    background: #fff
+  }

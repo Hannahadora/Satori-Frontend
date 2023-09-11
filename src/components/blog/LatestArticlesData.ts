@@ -2,6 +2,12 @@ import latest from '../../assets/images/dummy/latest.png';
 import smallimg from '../../assets/images/dummy/smallimg.png';
 import fullimg from '../../assets/images/dummy/fullimg.png';
 import lastimg from '../../assets/images/dummy/lastimg.png';
+import share from '../../assets/images/dummy/share.png';
+import facebook_icon from "../../assets/icons/facebook-icon.svg";
+import twitter_icon from "../../assets/icons/x.png";
+import instagram_icon from "../../assets/icons/instagram-icon.svg";
+import whatsapp_icon from "../../assets/icons/whatsapp-icon.svg";
+import linkedIn_icon from "../../assets/icons/linkedin-icon.svg";
 
 interface LatestsArticlesDataItems {
     id: number;
@@ -18,11 +24,24 @@ interface LatestsArticlesDataItems {
     subtitle: string;
     installbtn: string;
     links: string[];
+    summary: string;
     smallimg: string;
     fullimg: string;
     lastimg: string;
     lastcontent: string;
-  }
+    paragraph: string;
+    sharebutton: string;
+    icon: string;
+    // socialMediaIcons: string[];
+    socialParagraph:string;
+    instagram:string;
+    twitter:string;
+    facebook:string;
+    linkedin:string;
+    whatsapp:string;
+
+
+}
 
 
     const LatestsArticlesData: LatestsArticlesDataItems[] =[
@@ -44,9 +63,19 @@ interface LatestsArticlesDataItems {
         lastimg: lastimg,
         lastcontent: "Lorem ipsum dolor sit amet consectetur. Vel ut tristique in erat et ornare aliquam nisl volutpat. In at amet quam lectus. Tincidunt in vitae habitant vivamus augue nam enim amet. Accumsan et massa natoque tortor tempus vitae ultrices ullamcorper. Adipiscing sodales mi et amet in. At lorem quisque donec sit vitae est elementum enim sodales. Platea arcu eleifend sapien eget in sit sapien etiam nulla. Vel urna eget ultricies purus tincidunt sem sit turpis. Nibh mollis eget massa praesent urna. Dui nec ultrices blandit eu. Lacus dictum blandit sollicitudin rhoncus nulla urna eu malesuada. Placerat in arcu libero et viverra vitae venenatis at elementum. Purus consequat suscipit blandit cursus ut lobortis blandit nunc ac. Scelerisque neque nibh quisque sit semper porta. ",
         links: ['mental health', 'Well being', 'Understanding mental health'],
-        installbtn: "install"
+        summary: "Feeling inspired after reading our insightful article on the Satori blog? Take the next step towards enhancing your mental well-being by installing our app today and embark on a journey of self-discovery and growth!",
+        installbtn: "install",
+        instagram: instagram_icon,
+        twitter: twitter_icon,
+        facebook: facebook_icon,
+        linkedin: linkedIn_icon,
+        whatsapp: whatsapp_icon,
+        paragraph: 'Share this post',
+        sharebutton: 'share article',
+        icon:  share,
+        socialParagraph: 'Follow us',
+      
+    },
 
-        },
-
-    ]
-    export default LatestsArticlesData
+]
+export default LatestsArticlesData

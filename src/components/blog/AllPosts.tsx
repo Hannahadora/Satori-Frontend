@@ -12,12 +12,16 @@ interface AllPostItem {
 
 interface AllPostsProps {
   posts: AllPostItem[];
-  selectedId: number;
-  onSpanClick: (id: number) => void; // Add a callback prop for span clicks
+  selectedId: number[];
+  onSpanClick?: (id: number) => void; 
+  limit?: number;
 }
+const AllPosts: React.FC<AllPostsProps> = ({ posts, selectedId, onSpanClick, limit }) => {
+const selectedIds = Array.isArray(selectedId) ? selectedId : [selectedId];
+const filteredPosts = posts.filter((post) => selectedIds.includes(post.id));
 
-const AllPosts: React.FC<AllPostsProps> = ({ posts, selectedId, onSpanClick }) => {
-  const filteredPosts = posts.filter((post) => post.id === selectedId);
+
+  const postsToDisplay = limit ? filteredPosts.slice(0, limit) : filteredPosts; // Conditionally limit the number of items to display
 
   const shuffleArray = (array: string[]): string[] => {
     const shuffledArray = [...array];
@@ -29,26 +33,25 @@ const AllPosts: React.FC<AllPostsProps> = ({ posts, selectedId, onSpanClick }) =
   };
 
   return (
-    <div className="pt-20">
-      <h2 className="text-left text-black text-4xl">All Posts</h2>
+    <div className="">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 pt-8">
-        {filteredPosts.map((post) => (
+        {postsToDisplay.map((post) => (
           <div key={post.id} className="border rounded-md shadow-md article-card">
             <img src={post.img} alt={post.title} />
             <div className='article-text'>
-            <h2 className="text-lg font-semibold mb-2 px-4 text-justify pt-2 article-heading">{post.heading}</h2>
-            <p className="text-gray-700 text-justify px-4 text-lg article-paragraph">{post.content}</p>
+              <h2 className="text-lg font-semibold mb-2 px-4 text-justify pt-2 article-heading">{post.heading}</h2>
+              <p className="text-gray-700 text-justify px-4 text-lg article-paragraph">{post.content}</p>
             </div>
-            <button className="flex h-4 py-4 px-4 font-medium flex-col read-article justify-center items-center rounded-full my-4 mx-4 border bg-white text-accent-color-main">{post.button} </button>
+            <button className="flex h-4 py-4 px-4 font-medium flex-col read-article justify-center items-center rounded-full my-4 mx-4 border bg-white text-accent-color-main">{post.button}</button>
             {shuffleArray(post.links).map((link, index) => (
-              <div
-                key={index}
-                onClick={() => onSpanClick(post.id)}
-                className={`link-${index + 1} text-left text-[11px] flex items-center justify-center custom-link-style`}
-                style={{ display: 'inline-flex', justifyItems: 'space-around'}}
-              >
-                {link}
-              </div>
+             <div
+             key={index}
+             onClick={() => onSpanClick?.(post.id)} 
+             className={`link-${index + 1} text-left text-[11px] flex items-center justify-center custom-link-style`}
+             style={{ display: 'inline-flex', justifyItems: 'space-around' }}
+           >
+             {link}
+           </div>
             ))}
           </div>
         ))}

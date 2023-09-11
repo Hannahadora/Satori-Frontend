@@ -66,7 +66,13 @@ const Blog = () => {
         {LatestArticlesData.map((article) => (
           <LatestArticles key={article.id} post={article} />
         ))}
-        <AllPosts posts={AllPostsData} selectedId={selectedSpan} onSpanClick={handleSpanClick} />
+        
+        <div className='pt-20'>
+          <h2 className="text-left text-black text-4xl">All Posts</h2>
+        <AllPosts posts={AllPostsData} selectedId={[selectedSpan]} onSpanClick={handleSpanClick} />
+
+        </div>
+
         <div className="p-20">
           <BecomeBlogger />
         </div>
