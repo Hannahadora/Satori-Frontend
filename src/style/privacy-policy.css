@@ -1,0 +1,4 @@
+.blue_bordered-card {
+  border-left: 20px solid var(--accent-color-07, #179eb5);
+  background: var(--accent-color-01, #f1fbfd);
+}

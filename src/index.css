@@ -8,6 +8,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +24,15 @@ body {
   background: #fff;
 }
 
+:root {
+  --accent-color-02: #C6F0F8;
+}
+
+
+.header_nav-link{
+  display: block;
+  margin-bottom: 10px;
+}
 .app-container {
   max-width: 1200px;
   width: 100%;
@@ -37,10 +50,6 @@ h6 {
   font-weight: 600;
   line-height: 40px;
   color: #0d1011;
-}
-
-input {
-  /* width: 100%; */
 }
 
 input:focus {
@@ -66,7 +75,74 @@ input:focus {
   background-color: transparent;
   color: #0e606e;
 }
+.faq-btn-wrapper button:hover{
+background-color:#0e606e ;
+color:#ffffff ;
+}
 
+.accent-color-main {
+  color: #0e606e; 
+}
+.bg-accent-color-02{
+  background-color: #C6F0F8;
+}
+
+.custom-gray-11 {
+  color: #555E5F; 
+}
+.gray-9 {
+  color: #808C8E; 
+}
+
+.yellow-07{
+  color:  #D0923F; 
+}
+.accent-color-11 {
+  color: #094049; 
+}
+.gray-04 {
+  color: #D3D7D7; 
+}
+
+.gray-14 {
+  color: #010809; 
+}
+.active-span {
+  border-radius: 8px;
+  background-color: #F9F9F9;
+  width: 40px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.active-span:hover {
+  background-color: #F9F9F9; 
+}
+.accent-color-10{
+  color: #0D5865;
+}
+
+.gray-12{
+  color: #353B3C;
+}
+
+.team-profile{
+margin: 10px;
+padding: 2px! important;
+ border-radius: 24px 24px 0px 0px;
+background-color: #F9F9F9;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.heroImg-width2{
+width: 814px;
+height: 510px;
+object-fit: cover;
+}
+.heroImg-width{
+  width: 461px;
+  height: 510px;
+}
 .sub-title_01 {
   font-weight: 500;
   font-size: 24px;
@@ -120,8 +196,18 @@ input:focus {
     line-height: 30px;
   }
 
-  .btn {
+  .btn, .pry-btn {
     padding: 9px 22px;
+  }
+  .heroImg-width2{
+    width: 100%;
+  }
+  .sm-width2{
+    width: 20%;
+  }
+ 
+  .sm-width1{
+    width: 80%;
   }
   
 }
