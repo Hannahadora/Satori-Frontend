@@ -7,7 +7,7 @@ import '../../style/blog.css';
 import { BiChevronLeft } from "react-icons/bi";
 
 
-const FullBlogContents: React.FC = () => {
+const FullLatestContents: React.FC = () => {
   const { articleId } = useParams<{ articleId: string }>();
 
   const article = LatestsArticlesData.find((item) => item.id === Number(articleId));

@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import LatestsArticlesData from './LatestArticlesData'
-import AllpostsData from './AllPostsData'
+import FullAllpostData from './FullAllPostData'
 import AllPosts from './AllPosts';
 import '../../style/blog.css';
 import { BiChevronLeft } from "react-icons/bi";
 
 
-const FullBlogContents: React.FC = () => {
+const FullAllPosts: React.FC = () => {
   const { articleId } = useParams<{ articleId: string }>();
 
   const article = LatestsArticlesData.find((item) => item.id === Number(articleId));
@@ -25,7 +25,7 @@ const FullBlogContents: React.FC = () => {
     return shuffledArray;
   };
 
-  const allLinks = AllpostsData.flatMap(item => item.links);
+  const allLinks = FullAllpostData.flatMap(item => item.links);
   const shuffledLinks = shuffleArray(allLinks);
   const randomLinks = shuffledLinks.slice(0, 3); 
 
@@ -138,11 +138,11 @@ const FullBlogContents: React.FC = () => {
 
         <div className='mb-40'>
           <h2 className='text-[32px] text-black text-4xl pt-10'>Related Articles</h2>
-          <AllPosts posts={AllpostsData} selectedId={selectedIdArray} limit={3} />
+          <AllPosts posts={FullAllpostData} selectedId={selectedIdArray} limit={3} />
         </div>
       </div>
     </>
   );
 };
 
-export default FullLatestContents;
+export default FullAllPosts;

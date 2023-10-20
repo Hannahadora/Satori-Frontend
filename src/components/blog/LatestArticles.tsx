@@ -16,7 +16,7 @@ const LatestArticles: React.FC<LatestArticlesProps> = ({ post }) => {
   return (
     <>
       <div className="pt-16">
-        <Link to={"/FullBlogContents/1"}>
+        <Link to={"/FullLatestContents/1"}>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
             <div className="w-569 h-266">
               <img src={post.latest} alt="" className="object-cover" />

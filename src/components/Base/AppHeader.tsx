@@ -9,7 +9,6 @@ import MobileNav from "./MobileNav";
 const AppHeader = () => {
   const navigate = useNavigate();
   const [showMobileNav, setShowMobileNav] = useState(false);
-
   const goToWaitlist = () => {
     navigate("/join-waitlist");
   };

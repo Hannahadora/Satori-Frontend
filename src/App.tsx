@@ -2,7 +2,8 @@ import { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CommunityPage from "./pages/CommunityFaq";
-import FullBlogContents from "./components/blog/FullBlogContents";
+import FullLatestContents from "./components/blog/FullLatestContents";
+import GoogleVerification from "./GoogleVerification";
 import {
   JoinWaitList,
   Home,
@@ -56,7 +57,7 @@ function App() {
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/help-and-support" element={<HelpAndSupport />} />
-              <Route path="/FullBlogContents/:articleId" element={<FullBlogContents />} />
+              <Route path="/FullLatestContents/:articleId" element={<FullLatestContents />} />
               <Route
                 path="/help-and-support/community"
                 element={<Community />}
@@ -87,6 +88,7 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/our-partners" element={<OurPartners />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/google48da7d8786ad3ef6.html" element={<GoogleVerification />} />
             </Route>
           </Routes>
         </Router>
